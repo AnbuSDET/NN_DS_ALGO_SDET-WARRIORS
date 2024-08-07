@@ -15,19 +15,19 @@ import pageObjects.HomePage;
 public class GetStartedSteps {
 	WebDriver driver;
 	Properties p;
-	Logger logger;
+	Logger logger = BaseClass.getLogger();
 	
-	@When("I click the GetStarted Button")
-	public void i_click_the_get_started_button() {
-		logger.info("Clicking the GetStarted Button.............");
+	@When("User clicks the GetStarted Button")
+	public void user_clicks_the_get_started_button() {
 		GetStartedPage sp = new GetStartedPage(BaseClass.getDriver());
+		logger.info("Clicking the GetStarted Button.............");
 		sp.clickGetStarted();
 	}
-
+	
 	@Then("Home page should be displayed")
 	public void home_page_should_be_displayed() {
-		logger.info("Check display of Home Page............");
 		HomePage hp = new HomePage(BaseClass.getDriver());
+		logger.info("Check display of Home Page............");
 		boolean status = hp.NumpyNinjaLinkDisplay();
 		Assert.assertEquals(status, true);	
 		logger.info("Home page is displayed");
