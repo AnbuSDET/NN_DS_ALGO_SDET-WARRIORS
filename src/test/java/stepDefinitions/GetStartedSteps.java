@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import Factory.BaseClass;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.GetStartedPage;
@@ -17,11 +18,18 @@ public class GetStartedSteps {
 	Properties p;
 	Logger logger = BaseClass.getLogger();
 	
-	@When("User clicks the GetStarted Button")
-	public void user_clicks_the_get_started_button() {
+	@Given("User click the GetStarted Button at Start page")
+	public void user_click_the_get_started_button_at_start_page() {
 		GetStartedPage sp = new GetStartedPage(BaseClass.getDriver());
+		logger.info("Clicking the GetStarted Button at start page.............");
+		sp.clickGetStartedSP();
+	}
+	
+	@When("User clicks the GetStarted Button at start page")
+	public void user_clicks_the_get_started_button_at_start_page() {
 		logger.info("Clicking the GetStarted Button.............");
-		sp.clickGetStarted();
+		GetStartedPage sp = new GetStartedPage(BaseClass.getDriver());
+		sp.clickGetStartedSP();
 	}
 	
 	@Then("Home page should be displayed")
@@ -35,9 +43,11 @@ public class GetStartedSteps {
 	
 	@Then("Copyright@NumpyNinja2021 is displayed at Start page")
 	public void copyright_numpy_ninja2021_is_displayed_at_start_page() {
+		logger.info("Check the display of Copyright@NumpyNinja2021............");
 		GetStartedPage sp = new GetStartedPage(BaseClass.getDriver());
 		boolean status = sp.copyrightDisplay();
-		Assert.assertTrue(status);  
+		Assert.assertTrue(status); 
+		logger.info("Copyright@NumpyNinja2021 is displayed");
 	}
 
 
