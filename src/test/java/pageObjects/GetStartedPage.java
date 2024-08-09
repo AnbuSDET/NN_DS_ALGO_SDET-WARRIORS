@@ -22,7 +22,7 @@ public class GetStartedPage extends BasePage {
 	
 	//-----------Methods---------
 	
-	public void clickGetStarted() {
+	public void clickGetStartedSP() {
 		GetStartedBtn.click();
 	}
 		

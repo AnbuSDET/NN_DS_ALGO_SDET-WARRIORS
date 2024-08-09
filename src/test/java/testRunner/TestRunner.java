@@ -1,13 +1,11 @@
 package testRunner;
 
-import org.junit.runner.RunWith;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-
-@RunWith(Cucumber.class)
 @CucumberOptions (
-			  features={".//FeatureFiles/GetStarted.feature"},
+			 // features={".//FeatureFiles/GetStarted.feature",".//FeatureFiles/Home.feature"},
+		      features={".//FeatureFiles/SignIn.feature"},
 			  glue = "stepDefinitions",
 			  plugin = {"pretty", "html:reports/myreport.html", 
 					  "rerun:target/rerun.txt",
@@ -24,6 +22,6 @@ import io.cucumber.junit.CucumberOptions;
 			  
 		)
 
-public class TestRunner {
+public class TestRunner extends AbstractTestNGCucumberTests {
 
 }
