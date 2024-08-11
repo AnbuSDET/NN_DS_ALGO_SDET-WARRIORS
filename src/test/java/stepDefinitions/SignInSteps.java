@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import Factory.BaseClass;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -75,6 +74,26 @@ public class SignInSteps {
 		boolean display = sp.InvalidUsrNamePwdErrorMsg();
 		Assert.assertTrue(display);
 	}
+	
+	@Then("Please fill out this field warning message should be displayed at {string} username or {string} password field")
+	public void please_fill_out_this_field_warning_message_should_be_displayed_at_username_or_password_field(String user, String pwd) {
+	   logger.info("Verify whether Validation message Please Fill Out This Field is displayed at missed field ...."); 
+		  SignInPage rp = new SignInPage(BaseClass.getDriver());
+		  String ExpValidationMsg = "Please fill out this field.";
+		  System.out.println("The expected message is "+ExpValidationMsg);
+		  String ActValidationMsg = rp.checkValidationMsgRegisterPg(user, pwd);
+		  System.out.println("The actual message is: "+ActValidationMsg);
+		  if (ActValidationMsg.equalsIgnoreCase(ExpValidationMsg))
+			  {
+				  Assert.assertTrue(true);
+			  }
+		  else
+		     {
+			  Assert.assertTrue(false);
+			  System.out.println("The Validation message is not displayed..");
+		     }
+	}
+	
 		
 	@Given("User moves to home page after login to application")
 	public void user_moves_to_home_page_after_login_to_application() {
