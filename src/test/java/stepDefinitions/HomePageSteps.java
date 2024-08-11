@@ -42,6 +42,41 @@ public class HomePageSteps {
 		hp.clickDataStrucGetStarted();
 	}
 	
+	@When("Click Get Started button of {string} topic login")
+	public void click_get_started_button_of_topic_login(String topic) {
+		logger.info("Clicking the GetStarted Button at home page.............");
+		HomePage hp = new HomePage(BaseClass.getDriver());
+		switch (topic)
+		{
+		case "DataStructure": hp.clickDataStrucGetStarted();break;
+		case "Array":hp.clickArrayGetStarted();break;
+		case"Linked List": hp.clickLinkedListGetStarted();break;
+		case "Stack":hp.clickStackGetStarted();break;
+		case "Queue":hp.clickQueueGetStarted();break;
+		case "Tree":hp.clickTreeGetStarted();break;
+		case "Graph":hp.clickQueueGetStarted();break;
+		default: System.out.println("Unable to find this topic....");break;		
+		}
+	}
+	
+//	@Then("The {string} page should be displayed")
+//	public void the_page_should_be_displayed(String topic) {
+//		logger.info("Verify that the "+topic+" page is displayed............");
+//		HomePage hp = new HomePage(BaseClass.getDriver());
+//		switch (topic)
+//		{
+//		case "DataStructure": break;
+//		
+//		case "Array":hp.clickArrayGetStarted();break;
+//		case"Linked List": hp.clickLinkedListGetStarted();break;
+//		case "Stack":hp.clickStackGetStarted();break;
+//		case "Queue":hp.clickQueueGetStarted();break;
+//		case "Tree":hp.clickTreeGetStarted();break;
+//		case "Graph":hp.clickQueueGetStarted();break;
+//		default: System.out.println("Unable to find this topic....");break;		
+//		}
+//	}
+	
 	
 	@Then("You are not logged in error message is displayed")
 	public void you_are_not_logged_in_error_message_is_displayed() {
