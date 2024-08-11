@@ -4,7 +4,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions (
-			 // features={".//FeatureFiles/GetStarted.feature",".//FeatureFiles/Home.feature"},
+			  // features={".//FeatureFiles/GetStarted.feature"},
+		      //features={".//FeatureFiles/Home.feature"},
 		      //features={".//FeatureFiles/SignIn.feature"},
 		      //features={".//FeatureFiles/Register.feature"},
 			  glue = "stepDefinitions",
