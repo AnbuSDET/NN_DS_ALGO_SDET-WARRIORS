@@ -96,16 +96,17 @@ public class SignInSteps {
 	
 		
 	@Given("User moves to home page after login to application")
-	public void user_moves_to_home_page_after_login_to_application() {
+	public void user_moves_to_home_page_after_login_to_application() throws IOException {
 	    logger.info("User clicks the GetStarted Button at start page and clicks the Sign In.. ");
 	    GetStartedPage gsp = new GetStartedPage(BaseClass.getDriver());
 		gsp.clickGetStartedSP();
 		HomePage hp =new HomePage(BaseClass.getDriver());
 		hp.clickSigIn();	
 		logger.info("User login with valid username and password..........");
+		p = BaseClass.getProperties();
 		SignInPage sp = new SignInPage(BaseClass.getDriver());
-		 sp.enterUsername("Testing");
-		 sp.enterpassword("Password@143");
+		 sp.enterUsername(p.getProperty("username"));
+		 sp.enterpassword(p.getProperty("password"));
 		 sp.clickLogin();
 	}
 	
@@ -114,6 +115,18 @@ public class SignInSteps {
 		logger.info("Clicking the Register Link at Sign In page....");
 		SignInPage sp = new SignInPage(BaseClass.getDriver());
 		sp.clickRegister();		
+	}
+	
+	@Given("User sign in to the app with valid username {string} and {string}")
+	public void user_sign_in_to_the_app_with_valid_username_and(String user, String pwd) throws IOException {
+		logger.info("User sign in to the app with valid username and password.. ");
+	    HomePage hp =new HomePage(BaseClass.getDriver());
+		 hp.clickSigIn();	
+		 p = BaseClass.getProperties();
+	   	SignInPage sp = new SignInPage(BaseClass.getDriver());
+		 sp.enterUsername(p.getProperty("username"));
+		 sp.enterpassword(p.getProperty("password"));
+		 sp.clickLogin();
 	}
 
 	
