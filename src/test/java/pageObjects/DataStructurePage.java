@@ -1,12 +1,28 @@
 package pageObjects;
 
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import Factory.BaseClass;
+import io.cucumber.messages.types.Duration;
 
 public class DataStructurePage extends BasePage{
 
+	public String PYEditor_Code = "'Numpy Ninja'";	
+	
+	public String ConsoleOutput="";
+	public String Alertmesg ="";
+	
 	public DataStructurePage(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
@@ -18,8 +34,12 @@ public class DataStructurePage extends BasePage{
 	@FindBy (xpath="//*[text()='Data Structures-Introduction']//following::a[1]")
 	private WebElement DS_Introduction_GetStartedBtn;
 
-	@FindBy (xpath="//*[@class='list-group-item']")
-	private WebElement TimeComplexityBtn;
+	@FindBy (xpath="//*[@class='list-group-item']") 
+	public WebElement TimeComplexityBtn;
+	
+	@FindBy(xpath="//*[@class='list-group-item list-group-item-light ']")
+	private WebElement DS_TimeComplexity_LeftPanel;
+	
 	
 	@FindBy(linkText="Practice Questions") 
 	private WebElement PracticeQuestionsBtn;
@@ -29,22 +49,27 @@ public class DataStructurePage extends BasePage{
 	private WebElement DS_TimeComplexity_TryHereBtn;	
 	
 	
-	@FindBy (linkText = "Run")
+	@FindBy (xpath = "//*[text()='Run']")
 	private WebElement DS_TimeComplexity_RunBtn;
 	
 	
-	@FindBy (xpath ="//*[@class='CodeMirror-lines']")
-	private WebElement DS_PythonEditor_ConsoleInput;
+	@FindBy (xpath =  "//textarea[@id='editor']" )  
+	public WebElement DS_PythonEditor_ConsoleInput;
 	
 	
 	@FindBy (xpath ="//*[@id='output']")
 	private WebElement DS_PythonEditor_ConsoleOutPut;
 	
+	@FindBy (xpath="//*[text()='Sign out']")
+	private WebElement DS_Intro_SignOut;
+	
+	
+	@FindBy (xpath="//div[@role='alert']")
+	public WebElement DS_LogoutMessage;
 	
 	
 	//-----------Methods---------
-	
-	
+		
 	
 	public void click_GetStartedBtn_DSIroduction()
 	{
@@ -53,6 +78,8 @@ public class DataStructurePage extends BasePage{
 	
 	public void click_TimeComplexityBtn()
 	{
+		JavascriptExecutor jse = (JavascriptExecutor)BaseClass.getDriver();
+		jse.executeScript("window.scrollBy(0,1000)"); 
 		TimeComplexityBtn.click();
 	}
 	
@@ -64,35 +91,101 @@ public class DataStructurePage extends BasePage{
 	
 	public void click_DS_TimeComplexity_TryhereBtn()
 	{
-		
-		DS_TimeComplexity_TryHereBtn.click();
-		
+		JavascriptExecutor jse = (JavascriptExecutor)BaseClass.getDriver();
+		jse.executeScript("window.scrollBy(0,1000)"); 
+		DS_TimeComplexity_TryHereBtn.click();		
 	}
-	
-	
-	
+		
 	public void click_DS_PythonEditor_RunBtn()
-	{
-		DS_TimeComplexity_RunBtn.click();
+	{		
+		Actions action= new Actions(BaseClass.getDriver());
+		
+		action.moveToElement(DS_TimeComplexity_RunBtn).click().perform();		
+	
 	}
 	
-	
+		
+	// Python Editor ->  Without Codes
 	public void Click_DS_PythonEditor_Runbtn_WithoutCodes()
 	{
-		DS_PythonEditor_ConsoleInput.sendKeys("");
+		BaseClass.getDriver().findElement(By.cssSelector(".CodeMirror-scroll")).click();
+        JavascriptExecutor js=(JavascriptExecutor) BaseClass.getDriver();
+        js.executeScript("window.scrollTo(0,0)");	       
+        BaseClass.getDriver().findElement(By.cssSelector("div:nth-child(1) > textarea")).sendKeys("");
+        BaseClass.getDriver().findElement(By.cssSelector("button")).click();   
 	}
 	
 	
-	public void Click_DS_PythonEditor_Runbtn_ValidCodes()
+	  // Python Editor -> Entering Valid Codes 
+	public void Click_DS_PythonEditor_Runbtn_ValidCodes()		
+	
+	{	   			
+		
+			BaseClass.getDriver().findElement(By.cssSelector(".CodeMirror-scroll")).click();
+	        JavascriptExecutor js=(JavascriptExecutor) BaseClass.getDriver();
+	        js.executeScript("window.scrollTo(0,0)");	       
+	        BaseClass.getDriver().findElement(By.cssSelector("div:nth-child(1) > textarea")).sendKeys("print "+PYEditor_Code);
+	        BaseClass.getDriver().findElement(By.cssSelector("button")).click();   
+		
+	        
+	}
+	
+	
+	 // Python Editor -> Entering In-Valid Codes 
+	public void Click_DS_PythonEditor_Runbtn_InValidCodes()
 	{
-		DS_PythonEditor_ConsoleInput.sendKeys("print"+"'Numpy Ninja'");
+		BaseClass.getDriver().findElement(By.cssSelector(".CodeMirror-scroll")).click();
+        JavascriptExecutor js=(JavascriptExecutor) BaseClass.getDriver();
+        js.executeScript("window.scrollTo(0,0)");	       
+        BaseClass.getDriver().findElement(By.cssSelector("div:nth-child(1) > textarea")).sendKeys("Print "+PYEditor_Code);
+        BaseClass.getDriver().findElement(By.cssSelector("button")).click();  
 		
 	}
 	
-	public void Click_DS_PythonEditor_Runbtn_InValidCodes()
+	
+	// Python Editor -> Console OUTPUT -> For Valid Codes
+	public void validate_Console_Output()
+	{				
+		WebElement result=BaseClass.getDriver().findElement(By.xpath("//*[@id='output']"));		
+		
+         ConsoleOutput=result.getText();  
+        
+	}
+	
+	// Python Editor -> Invalid Codes Validation (Alert Message)
+	public void Validate_OutputConsole_InvalidCodes()
 	{
-		DS_PythonEditor_ConsoleInput.sendKeys("Print"+"'Numpy Ninja'");	
+		Alert alert = driver.switchTo().alert();		
+		Alertmesg = alert.getText();
+			
 	}
 	
 	
+	public void click_DS_TimeComplexity_LeftPanel()
+	{
+		DS_TimeComplexity_LeftPanel.click();
+	}
+	
+	// Navigating to the PY_Editor Page
+	public void DS_Pyhton_Editor_Page()
+	{
+		click_GetStartedBtn_DSIroduction();
+		click_TimeComplexityBtn();
+		click_DS_TimeComplexity_TryhereBtn();
+	}
+	
+	
+	// Clicking Sign out Button
+	
+	public void click_Signout_Btn()
+	{
+		DS_Intro_SignOut.click();
+	}
+	
+	public Boolean SignOutErrorMessgae()
+	{
+				
+		boolean status = DS_LogoutMessage.isDisplayed();
+		return status;
+	}
 }

@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions (
 			 // features={".//FeatureFiles/GetStarted.feature",".//FeatureFiles/Home.feature"},
-		      features={".//FeatureFiles/SignIn.feature"},
+		      features={".//FeatureFiles/DataStructure.feature"},
 			  glue = "stepDefinitions",
 			  plugin = {"pretty", "html:reports/myreport.html", 
 					  "rerun:target/rerun.txt",
@@ -15,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
 			  monochrome = true,
 			  publish = true
 			  //tags="@sanity"  // this will execute scenarios tagged with @sanity
-			  //tags="@regression"
+			 //tags="@test"
 			  //tags="@sanity and @regression" //Scenarios tagged with both @sanity and @regression
 			  //tags="@sanity and not @regression" //Scenarios tagged with @sanity but not tagged with @regression
 			  //tags="@sanity or @regression" //Scenarios tagged with either @sanity or @regression	
