@@ -64,7 +64,7 @@ Given The User in the DS-Python Try Editor page after clicking Try Here button
 When  The user write the InValid python code in Editor and Clicks Run button
 Then  The User should be able to see error message in the pop message
 
-	@test
+	
 	Scenario: Testing the Sign out link in the DS Introduction page
 	
 	Given The user is in the DS Introduction page

@@ -46,19 +46,11 @@ public class DataStructurePage extends BasePage{
 	
 	
 	@FindBy (xpath="//*[@class='btn btn-info']")
-	private WebElement DS_TimeComplexity_TryHereBtn;	
+	private WebElement TryHereBtn;	
 	
 	
 	@FindBy (xpath = "//*[text()='Run']")
-	private WebElement DS_TimeComplexity_RunBtn;
-	
-	
-	@FindBy (xpath =  "//textarea[@id='editor']" )  
-	public WebElement DS_PythonEditor_ConsoleInput;
-	
-	
-	@FindBy (xpath ="//*[@id='output']")
-	private WebElement DS_PythonEditor_ConsoleOutPut;
+	private WebElement RunBtn;	
 	
 	@FindBy (xpath="//*[text()='Sign out']")
 	private WebElement DS_Intro_SignOut;
@@ -93,14 +85,14 @@ public class DataStructurePage extends BasePage{
 	{
 		JavascriptExecutor jse = (JavascriptExecutor)BaseClass.getDriver();
 		jse.executeScript("window.scrollBy(0,1000)"); 
-		DS_TimeComplexity_TryHereBtn.click();		
+		TryHereBtn.click();		
 	}
 		
 	public void click_DS_PythonEditor_RunBtn()
 	{		
 		Actions action= new Actions(BaseClass.getDriver());
 		
-		action.moveToElement(DS_TimeComplexity_RunBtn).click().perform();		
+		action.moveToElement(RunBtn).click().perform();		
 	
 	}
 	
