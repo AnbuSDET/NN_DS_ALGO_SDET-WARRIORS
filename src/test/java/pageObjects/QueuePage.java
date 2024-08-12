@@ -41,11 +41,33 @@ public class QueuePage extends BasePage{
 	
 	
 	
-	@FindBy (xpath = "")
-	WebElement All_TryHereBtn;
-	
 
+	public void Click_ImplementaionOfQueue()
+	{
+		ImpofQueue_Btn.click();
+	}
 	
+	public void Click_ImplemenUsingCollectionOfQueue()
+	{
+		ImpusingcollectionQueue_Btn.click();
+	}
+	
+	
+	public void Click_ImplemenUsingArry()
+	{
+		ImpUsingArray_Btn.click();
+	}
+	
+	public void Click_QueueOperation()
+	{
+		QueueOperation_Btn.click();
+	}
+	
+	
+	public void click_PracticeQuestions()
+	{
+		LeftPanel_PracticeQuestion_Btn.click();
+	}
 	
 	
 }
