@@ -3,14 +3,14 @@ Feature: Testing the LinkedList page and its functionalities in NumpyNinja app
   I want to use this template for my feature file
 
 Background: 
-	Given User move to home page after login to application
-  And clicking the get started of linked list
-  And The user is in the LinkedList page after successful login
+   Given User move to home page after login to application
+   And clicking the get started of linked list
+   And The user is in the LinkedList page after successful login
  
-	@Introduction
-  Scenario: Testing the Introduction tab in LinkedList page
-    When The user clicks Introduction tab in the page
-    Then The user should be redirected to the Introduction Page
+@Introduction
+Scenario: Testing the Introduction tab in LinkedList page
+  When The user clicks Introduction tab in the page
+  Then The user should be redirected to the Introduction Page
     
  
  Scenario: Testing the TryHere button in the LinkedList Introduction Page
