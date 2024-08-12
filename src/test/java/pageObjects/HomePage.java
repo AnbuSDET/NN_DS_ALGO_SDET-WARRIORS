@@ -21,6 +21,12 @@ public class HomePage extends BasePage{
 	@FindBy(xpath="//a[normalize-space()='Sign in']")
 	private WebElement SignInLink;
 	
+	@FindBy(xpath="//a[normalize-space()='Register']")
+	private WebElement RegisterLink;
+	
+	@FindBy(xpath="//ul/a[@href='#']/following-sibling::a[1]")
+	private WebElement UsernameLink;
+	
 	@FindBy (xpath="//a[contains(text(),'Get Started')]")
 	private List<WebElement> HomepageGetStartedBtnList;
 	
@@ -46,10 +52,13 @@ public class HomePage extends BasePage{
 	private WebElement GraphGetStartedBtn;
 	
 	@FindBy(xpath="//div[@role='alert']")
-	private WebElement YouAreLoggedInMsg;
+	private WebElement YouAreLoggedInMsg;  //-----Message after SignIn with Valid credentials
 		
 	@FindBy (xpath ="//div[contains(text(),'You are not logged in')]")
-	private WebElement NotLoggedInErrMsg;
+	private WebElement NotLoggedInErrMsg;  //-----clicking Get started without signing in
+	
+	@FindBy (xpath="//div[contains(text(),'New Account Created.')]")
+	private WebElement NewAccCreatedMsg;   //----after Registering a new user
 	
 	
 	//------------------Methods---------------
@@ -71,6 +80,25 @@ public class HomePage extends BasePage{
 	
 	public boolean NotLoggedInErrorMsg() {
 		boolean status = NotLoggedInErrMsg.isDisplayed();
+		return status;
+	}
+	
+	public void clickRegisterLink() {
+		RegisterLink.click();
+	}
+	
+	public boolean checkNewAccCreatedMsg() {
+		boolean display = NewAccCreatedMsg.isDisplayed();
+		return display;
+	}
+	
+	public String getUsernameAtLinkHomepage() {
+		String name = UsernameLink.getText();
+		return name;
+	}
+	
+	public boolean checkUsernameLinkDisplay() {
+		boolean status = UsernameLink.isDisplayed();
 		return status;
 	}
 	
