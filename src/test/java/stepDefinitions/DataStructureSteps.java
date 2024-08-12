@@ -175,25 +175,28 @@ public class DataStructureSteps {
 		ds.click_TimeComplexityBtn();	
 	
 	}
-	@When("The user clicks the Try here button in the time complexity page")
-	public void the_user_clicks_the_try_here_button_in_the_time_complexity_page() {
-		
-		logger.info("Clicking the TryHere Button......");
+	
+	
+	
+	@When("The user clicks the Try here button in this Page")
+	public void the_user_clicks_the_try_here_button_in_this_page() {
+          logger.info("Clicking the TryHere Button......");
 		
 		DataStructurePage ds = new DataStructurePage(BaseClass.getDriver());
 		
 		ds.click_DS_TimeComplexity_TryhereBtn();
-		
 	}
-	@Then("The User should be redirected to DS_Try Editor page")
-	public void the_user_should_be_redirected_to_ds_try_editor_page() {
-		
-	    String CurURL= BaseClass.getDriver().getCurrentUrl();
+
+	@Then("The User should be redirected to Python Editor page")
+	public void the_user_should_be_redirected_to_python_editor_page() {
+	  
+       String CurURL= BaseClass.getDriver().getCurrentUrl();
 	    
 	    Assert.assertEquals(true, CurURL.contains("tryEditor"));
 		
-	}
-
+	}	
+	
+	
 	//Practice questions link 
 	
 	
