@@ -23,13 +23,13 @@ Scenario: Testing the Introduction tab in LinkedList page
  		When The user enters valid python code and press Run button
  		Then The user should see the code getting executed and output is displayed 
  		
- #Scenario: Testing the online editor in the LL pagewith invalid python code
- 		#When The user enters invalid python code and press Run button
- 	#	Then The user should see the code is not executed and error message pops up
+ Scenario: Testing the online editor in the LL pagewith invalid python code
+ 		When The user enters invalid python code and press Run button
+ 		Then The user should see the code is not executed and error message pops up
  		
- #Scenario: Testing the online editor in the LL pagewith no code at all
- 	#	When The user enters no python code and press Run button
- 		#Then The user should see no error message and stay in the same online editor page
+ Scenario: Testing the online editor in the LL pagewith no code at all
+ 		When The user enters no python code and press Run button
+ 		Then The user should see no error message and stay in the same online editor page
  		
  		@CreatingALinkedList
  		
