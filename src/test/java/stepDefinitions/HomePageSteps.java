@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import java.util.Properties;
 
+import org.apache.commons.collections4.bag.SynchronizedSortedBag;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -59,23 +60,25 @@ public class HomePageSteps {
 		}
 	}
 	
-//	@Then("The {string} page should be displayed")
-//	public void the_page_should_be_displayed(String topic) {
-//		logger.info("Verify that the "+topic+" page is displayed............");
-//		HomePage hp = new HomePage(BaseClass.getDriver());
-//		switch (topic)
-//		{
-//		case "DataStructure": break;
-//		
-//		case "Array":hp.clickArrayGetStarted();break;
-//		case"Linked List": hp.clickLinkedListGetStarted();break;
-//		case "Stack":hp.clickStackGetStarted();break;
-//		case "Queue":hp.clickQueueGetStarted();break;
-//		case "Tree":hp.clickTreeGetStarted();break;
-//		case "Graph":hp.clickQueueGetStarted();break;
-//		default: System.out.println("Unable to find this topic....");break;		
-//		}
-//	}
+		
+	@Then("The {string} page should be displayed")
+	public void the_page_should_be_displayed(String topic) {
+		logger.info("Verify that the "+topic+" page is displayed............");
+		HomePage hp = new HomePage(BaseClass.getDriver());
+		boolean status = false;
+		switch (topic)
+		{
+		case "DataStructure":status = hp.checkDS_Intro_PageDisplay();Assert.assertTrue(status);break;
+		case "Array":status = hp.checkArrayPageDisplay();Assert.assertTrue(status);break; 
+		case"Linked List": status = hp.checkLinkedListPageDisplay();Assert.assertTrue(status);break;
+		case "Stack":status = hp.checkStackPageDisplay();Assert.assertTrue(status);break;
+		case "Queue":status = hp.checkQueuePageDisplay();Assert.assertTrue(status);break;
+		case "Tree":status = hp.checkTreePageDisplay();Assert.assertTrue(status);break;
+		case "Graph":hp.checkGraphPageDisplay();Assert.assertTrue(status);break;
+		default: System.out.println("Unable to find the page....");Assert.assertTrue(status);break;
+		}
+		
+	}
 	
 	
 	@Then("You are not logged in error message is displayed")

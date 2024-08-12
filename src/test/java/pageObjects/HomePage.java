@@ -62,6 +62,27 @@ public class HomePage extends BasePage{
 	private WebElement NewAccCreatedMsg;   //----after Registering a new user
 	
 	
+	@FindBy(xpath="//h4[normalize-space()='Data Structures-Introduction']")
+	private WebElement DS_Intro_Page;
+	
+	@FindBy(xpath="//h4[normalize-space()='Array']")
+	private WebElement ArrayPage;
+	
+	@FindBy(xpath="//h4[normalize-space()='Linked List']")
+	private WebElement LinkedListPage;
+	
+	@FindBy(xpath="//h4[normalize-space()='Stack']")
+	private WebElement StackPage;
+	
+	@FindBy(xpath="//h4[normalize-space()='Queue']")
+	private WebElement QueuePage;
+	
+	@FindBy(xpath="//h4[normalize-space()='Tree']")
+	private WebElement TreePage;
+	
+	@FindBy(xpath="//h4[normalize-space()='Graph']")
+	private WebElement GraphPage;
+	
 	//------------------Methods---------------
 	
 	public boolean NumpyNinjaLinkDisplay() {
@@ -129,6 +150,41 @@ public class HomePage extends BasePage{
 	
 	public void clickGraphGetStarted(){
 		GraphGetStartedBtn.click();
+	}
+	
+	public boolean checkDS_Intro_PageDisplay() {
+		boolean display = DS_Intro_Page.isDisplayed();
+		return display;
+	}
+	
+	public boolean checkLinkedListPageDisplay() {
+		boolean display = LinkedListPage.isDisplayed();
+		return display;
+	}
+	
+	public boolean checkStackPageDisplay() {
+		boolean display = StackPage.isDisplayed();
+		return display;
+	}
+	
+	public boolean checkArrayPageDisplay() {
+		boolean display = ArrayPage.isDisplayed();
+		return display;
+	}
+	
+	public boolean checkQueuePageDisplay() {
+		boolean display = QueuePage.isDisplayed();
+		return display;
+	}
+	
+	public boolean checkTreePageDisplay() {
+		boolean display = TreePage.isDisplayed();
+		return display;
+	}
+	
+	public boolean checkGraphPageDisplay() {
+		boolean display = GraphPage.isDisplayed();
+		return display;
 	}
 	
 
