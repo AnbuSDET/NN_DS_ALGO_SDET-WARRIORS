@@ -108,7 +108,7 @@ Background:
  		
  		Scenario: Testing the Practice Questions link in the LL page
  		Given The user is in the LinkedList Page
- 		When The user clicks practice qns tab
+ 		When The user clicks practice qns tab 
  		Then The user should be redirected to the practice qns page
  		
  		
