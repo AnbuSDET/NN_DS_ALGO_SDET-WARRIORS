@@ -38,7 +38,7 @@ public class LinkedListPage extends BasePage {
 		private WebElement InsertionBtn;
 		
 		@FindBy (linkText="Deletion")
-		private WebElement Deletion;
+		private WebElement DeletionBtn;
 		
 		@FindBy (linkText="Practice Questions")
 		private WebElement PracticeQns;
@@ -66,13 +66,13 @@ public class LinkedListPage extends BasePage {
 		String LL_Introduction_Page_URL="https://dsportalapp.herokuapp.com/linked-list/introduction/";
 		String LL_CreatingLinkedList_URL="https://dsportalapp.herokuapp.com/linked-list/creating-linked-list/";
 		String LL_TypesofLinkedList_URL="https://dsportalapp.herokuapp.com/linked-list/types-of-linked-list/";
-		String LL_ImplementinPython_URL="https://dsportalapp.herokuapp.com/linked-list/implement-linked-list-in-python/";
+		String LL_ImplementingLinkedList_URL="https://dsportalapp.herokuapp.com/linked-list/implement-linked-list-in-python/";
 		String LL_Traversal_URL="https://dsportalapp.herokuapp.com/linked-list/traversal/";
 		String LL_Insertion_URL="https://dsportalapp.herokuapp.com/linked-list/insertion-in-linked-list/";
 		String LL_Deletion_URL="https://dsportalapp.herokuapp.com/linked-list/deletion-in-linked-list/";
 		String LL_PracticeQns_URL="https://dsportalapp.herokuapp.com/linked-list/practice";
 		String Online_Editor_Console_URL="https://dsportalapp.herokuapp.com/tryEditor";
-		String code="hello";
+		//String code="hello";
 		//creating ll,types of ll,implement ll in python,traversal,insertion,deletion,practice qns
 		
 		
@@ -90,8 +90,6 @@ public class LinkedListPage extends BasePage {
 				 return CheckLL_URL;
 		}
 	
-		
-		
 		public void click_Introduction() {
 			IntroductionBtn.click();
 		}
@@ -111,22 +109,76 @@ public class LinkedListPage extends BasePage {
 			 boolean Check_URL = Online_Editor_Console_URL.equals(Current_URL);	
 			 return Check_URL;
 		}
-		public void enter_Valid_PythonCode() {
-			
-			OnlineEditorConsole.sendKeys("print ('"+code+"')");
-			RunBtn.click();
-		
-		}
-		
-		public boolean check_valid_pythoncode()
+		public void click_creatingLinkedList()
 		{
-			String op=ConsoleOutput.getText();
-			boolean code_check=code.equals(op);
-			return code_check;
-			
+			CreatingLinkedListBtn.click();
 		}
-		
-		
+		public boolean check_CreatingLinkedListPage()
+		{
+			String Current_URL=BaseClass.getDriver().getCurrentUrl();
+			 boolean Check_URL = LL_CreatingLinkedList_URL.equals(Current_URL);	
+			 return Check_URL;
+
+		}
+		public void click_TypesOfLinkedList()
+		{
+			TypesOfLinkedListBtn.click();
+		}
+		public boolean check_TypesOfLinkedListPage()
+		{
+			String Current_URL=BaseClass.getDriver().getCurrentUrl();
+			 boolean Check_URL = LL_TypesofLinkedList_URL.equals(Current_URL);	
+			 return Check_URL;
+
+		}
+
+		public void click_ImplementingLinkedList()
+		{
+			ImplementLinkedListBtn.click();
+		}
+		public boolean check_ImplementingLinkedListPage()
+		{
+			String Current_URL=BaseClass.getDriver().getCurrentUrl();
+			 boolean Check_URL = LL_ImplementingLinkedList_URL.equals(Current_URL);	
+			 return Check_URL;
+
+		}
+		public void click_Traversal()
+		{
+			TraversalBtn.click();
+		}
+		public boolean check_Traversal()
+		{
+			String Current_URL=BaseClass.getDriver().getCurrentUrl();
+			 boolean Check_URL = LL_Traversal_URL.equals(Current_URL);	
+			 return Check_URL;
+
+		}
+
+		public void click_Insertion()
+		{
+			InsertionBtn.click();
+		}
+		public boolean check_Insertion()
+		{
+			String Current_URL=BaseClass.getDriver().getCurrentUrl();
+			 boolean Check_URL = LL_Insertion_URL.equals(Current_URL);	
+			 return Check_URL;
+
+		}
+		public void click_Deletion()
+		{
+			DeletionBtn.click();
+		}
+		public boolean check_Deletion()
+		{
+			String Current_URL=BaseClass.getDriver().getCurrentUrl();
+			 boolean Check_URL = LL_Deletion_URL.equals(Current_URL);	
+			 return Check_URL;
+
+		}
+
+
 		
 		}
 		

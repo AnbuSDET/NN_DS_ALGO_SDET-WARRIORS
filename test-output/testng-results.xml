@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="36" passed="36" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-12T21:13:21 EDT" name="Default suite" finished-at="2024-08-12T21:16:30 EDT" duration-ms="188988">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-08-12T21:13:21 EDT" name="Default test" finished-at="2024-08-12T21:16:30 EDT" duration-ms="188988">
+      <class name="testRunner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:13:21 EDT" name="setUpClass" finished-at="2024-08-12T21:13:22 EDT" duration-ms="1176" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@71dbfe64]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:13:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:13:30 EDT" duration-ms="7783" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Introduction tab in LinkedList page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:13:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:13:37 EDT" duration-ms="6222" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the TryHere button in the LinkedList Introduction Page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:13:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:13:42 EDT" duration-ms="5472" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the LL page with valid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:13:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:13:47 EDT" duration-ms="5375" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the LL pagewith invalid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:13:47 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:13:52 EDT" duration-ms="4888" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the LL pagewith no code at all"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:13:52 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:13:57 EDT" duration-ms="4588" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Creating a LinkedList tab in LinkedList page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:13:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:14:02 EDT" duration-ms="5236" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Try Here button in the CreatingALinkedList page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:14:02 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:14:08 EDT" duration-ms="5422" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the CreatingLinkedList page with valid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:14:08 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:14:13 EDT" duration-ms="5123" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the CreatingLinkedList  pagewith invalid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:14:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:14:17 EDT" duration-ms="4706" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the CreatingLinkedList pagewith no code at all"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:14:17 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:14:22 EDT" duration-ms="4664" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Types of LinkedList tab in LinkedList page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:14:22 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:14:28 EDT" duration-ms="5671" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Try Here button in the typesofLinkedList page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:14:28 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:14:33 EDT" duration-ms="5522" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the TypesofLinkedList page with valid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:14:33 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:14:38 EDT" duration-ms="5131" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the TypesofLinkedList  pagewith invalid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:14:38 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:14:43 EDT" duration-ms="5089" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the TypesofLinkedList pagewith no code at all"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:14:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:14:48 EDT" duration-ms="4321" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the ImplementingLinkedList tab in LinkedList page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:14:48 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:14:52 EDT" duration-ms="4544" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Try Here button in the implementinglinkedlist page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:14:52 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:14:58 EDT" duration-ms="5840" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the implementinglinked page with valid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:14:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:15:03 EDT" duration-ms="5167" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the implementinglinked  pagewith invalid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:15:03 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:15:08 EDT" duration-ms="4880" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the implementinglinked pagewith no code at all"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:15:08 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:15:12 EDT" duration-ms="4183" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Traversal tab in LinkedList page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:15:12 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:15:17 EDT" duration-ms="4459" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Try Here button in the traversal page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:15:17 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:15:22 EDT" duration-ms="5368" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the traversal page with valid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:15:22 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:15:28 EDT" duration-ms="5656" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the traversal  pagewith invalid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:15:28 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:15:33 EDT" duration-ms="5091" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the traversal pagewith no code at all"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:15:33 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:15:37 EDT" duration-ms="3931" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Insertion tab in LinkedList page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:15:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:15:42 EDT" duration-ms="4904" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Try Here button in the insertion page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:15:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:15:47 EDT" duration-ms="5016" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the insertion page with valid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:15:47 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:15:52 EDT" duration-ms="5508" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the insertion  pagewith invalid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:15:52 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:15:57 EDT" duration-ms="4902" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the insertion pagewith no code at all"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:15:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:16:02 EDT" duration-ms="4944" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Deletion tab in LinkedList page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:16:02 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:16:07 EDT" duration-ms="4876" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Try Here button in the deletion page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:16:07 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:16:14 EDT" duration-ms="6548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the deletion page with valid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:16:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:16:19 EDT" duration-ms="5096" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the deletion  pagewith invalid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:16:19 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:16:23 EDT" duration-ms="4626" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the online editor in the deletion pagewith no code at all"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:16:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-12T21:16:28 EDT" duration-ms="4401" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Testing the Practice Questions link in the LinkedList Page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the LinkedList page and its functionalities in NumpyNinja app"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestRunner@97e93f1]" started-at="2024-08-12T21:16:28 EDT" name="tearDownClass" finished-at="2024-08-12T21:16:30 EDT" duration-ms="2534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunner.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import Factory.BaseClass;
+
 public class StackPage extends BasePage {
 
 	public StackPage(WebDriver driver) {
@@ -13,19 +15,19 @@ public class StackPage extends BasePage {
 	//--------------------Web Elements--------------------------
 	
 	@FindBy(xpath="//a[@href=\'stack\']")
-	private WebElement GetStartedStack;
+	private WebElement GetStartedStackBtn;
 	
 	@FindBy(xpath="//a[@href=\'operations-in-stack\']")
-	private WebElement StackOperations;
+	private WebElement StackOperationsBtn;
 	
 	@FindBy(xpath="a[@href=\"/stack/implementation/\"]")
-	private WebElement StackImplementation;
+	private WebElement StackImplementationBtn;
 	
 	@FindBy(xpath="//a[@href=\"/stack/stack-applications/\"]")
-	private WebElement StackApplication;
+	private WebElement StackApplicationBtn;
 	
 	@FindBy(xpath="//a[@href=\"/stack/practice\"]")
-	private WebElement StackPracticeQns;
+	private WebElement StackPracticeQnsBtn;
 	
 	@FindBy(xpath="//a[@href=\"/tryEditor\"]")
 	private WebElement TryHereBtn;
@@ -37,5 +39,39 @@ public class StackPage extends BasePage {
 	String Stack_Implementations_URL="https://dsportalapp.herokuapp.com/stack/implementation/";
 	String Stack_Applications_URL="https://dsportalapp.herokuapp.com/stack/stack-applications/";
 	String Stack_PracticeQns_URL="https://dsportalapp.herokuapp.com/stack/practice";
+	
+	//--------------Methods-----------------------
+	
+	public void click_StGetStarted()
+	{
+		GetStartedStackBtn.click();
+	}
+	public boolean check_StHomePage() {
+		
+		String CurrentLL_URL=BaseClass.getDriver().getCurrentUrl();
+			 boolean CheckLL_URL = Stack_Homepage_URL.equals(CurrentLL_URL);	
+			 return CheckLL_URL;
+	}
+
+	public void click_Operations() {
+		StackOperationsBtn.click();
+	}
+	
+	public boolean check_StOperationsPage()
+	{
+		String Current_URL=BaseClass.getDriver().getCurrentUrl();
+			 boolean Check_URL = Stack_Operations_URL.equals(Current_URL);	
+			 return Check_URL;
+	}
+	
+	public void click_TryHereBtn() {
+			TryHereBtn.click();
+}
+//	public boolean check_TryEditorPage() {
+//		String Current_URL=BaseClass.getDriver().getCurrentUrl();
+//		 boolean Check_URL = Online_Editor_Console_URL.equals(Current_URL);	
+//		 return Check_URL;
+//	}
+
 	
 	}
