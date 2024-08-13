@@ -136,7 +136,7 @@ Then The User should be redirected to Python Editor page
 
 Scenario: Testing the Implementation using array page Python Editor with Valid codes
 
-Given The User is in the Implementation using array Page Python Editor  
+Given The User is in the Implementation using array Page Python Editor 
 When The user write the Valid python code in Editor and Clicks Run button
 Then The User should be able to see the output in the console
 

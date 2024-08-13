@@ -115,7 +115,7 @@ public class BaseClass {
 	public static String randomAlphaNumeric()
 	{
 	 String str=RandomStringUtils.randomAlphabetic(5);
-	 String num=RandomStringUtils.randomNumeric(10);
+	 String num=RandomStringUtils.randomNumeric(5);
 	 return str+num;
 	}
 	

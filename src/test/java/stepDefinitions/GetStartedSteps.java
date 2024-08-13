@@ -2,12 +2,12 @@ package stepDefinitions;
 
 import java.util.Properties;
 
+
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import Factory.BaseClass;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.GetStartedPage;
@@ -18,14 +18,8 @@ public class GetStartedSteps {
 	Properties p;
 	Logger logger = BaseClass.getLogger();
 	
-	@Given("User click the GetStarted Button at Start page")
-	public void user_click_the_get_started_button_at_start_page() {
-		GetStartedPage sp = new GetStartedPage(BaseClass.getDriver());
-		logger.info("Clicking the GetStarted Button at start page.............");
-		sp.clickGetStartedSP();
-	}
-	
-	@When("User clicks the GetStarted Button at start page")
+
+	@When("User clicks the GetStarted button at start page")
 	public void user_clicks_the_get_started_button_at_start_page() {
 		logger.info("Clicking the GetStarted Button.............");
 		GetStartedPage sp = new GetStartedPage(BaseClass.getDriver());
