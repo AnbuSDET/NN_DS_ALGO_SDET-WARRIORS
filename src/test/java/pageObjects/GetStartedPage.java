@@ -31,6 +31,10 @@ public class GetStartedPage extends BasePage {
 	return displayed;		
 	}
 	
-
+	public boolean checkStartPageDisplay() {
+		boolean display = NumpyNinjaCopyrightLink.isDisplayed();
+		return display;
+	
+	}
 
 }

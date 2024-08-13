@@ -40,8 +40,8 @@ Then The user should be redirected to the Practice question Page
  Scenario: Testing the Try here button in the Time complexity Page
  
  Given The User is in the  DS_Time Complexity Page after login
- When The user clicks the Try here button in the time complexity page
- Then The User should be redirected to DS_Try Editor page
+ When The user clicks the Try here button in this Page
+ Then The User should be redirected to Python Editor page
  
  
 Scenario: Testing the DS-Python Try Editor page without any Python codes

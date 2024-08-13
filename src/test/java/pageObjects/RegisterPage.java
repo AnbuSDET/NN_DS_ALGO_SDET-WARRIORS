@@ -108,5 +108,7 @@ public class RegisterPage extends BasePage {
 		return validationMessage;
 		
 	}
+	
+	
 
 }

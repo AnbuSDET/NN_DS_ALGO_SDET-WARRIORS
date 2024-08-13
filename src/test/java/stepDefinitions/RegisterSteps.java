@@ -89,6 +89,7 @@ public class RegisterSteps {
 		  rp.enterPassword(BaseClass.randomAlphaNumeric());
 		  rp.enterPasswordConfirm(BaseClass.randomAlphaNumeric());		
 	}
+	
 
 	@Then("Error message stating password mismatch should be displayed")
 	public void error_message_stating_password_mismatch_should_be_displayed() {
@@ -97,6 +98,7 @@ public class RegisterSteps {
 		  boolean display = rp.pwdMismatchErrMsgDisplay();
 		  Assert.assertTrue(display);
 	}
+	
 	
 	@Given("User provides EXISTING username {string} but valid password {string} and password confirmation {string} details")
 	public void user_provides_existing_username_but_valid_password_and_password_confirmation_details(String string, String string2, String string3) throws IOException {
@@ -109,6 +111,7 @@ public class RegisterSteps {
 		  rp.enterPasswordConfirm(pwd);
 	}
 
+	
 	@Then("Error message stating username already exists should be displayed")
 	public void error_message_stating_username_already_exists_should_be_displayed() {
 		  logger.info("Verify the display of Error message stating username already exists...."); 
@@ -128,6 +131,7 @@ public class RegisterSteps {
 	    
 	}
 	
+	
 	@Given("User provides valid username {string} but unaccepted password {string} data")
 	public void user_provides_valid_username_but_unaccepted_password_data(String user, String pswd) throws IOException {
 		  logger.info("Provides valid username but an INVALID password to register ...."); 
@@ -138,6 +142,7 @@ public class RegisterSteps {
 		  rp.enterPasswordConfirm(pwd);
 	}
 
+	
 	@Then("Error message stating password setting rules should be displayed")
 	public void error_message_stating_password_setting_rules_should_be_displayed() {
 		 logger.info("Verify the error message pointing improper password given ...."); 
@@ -156,12 +161,14 @@ public class RegisterSteps {
 			  }
 	}
 	
+	
 	@When("User clicks the Login link at the bottom of Register page")
 	public void user_clicks_the_login_link_at_the_bottom_of_register_page() {
 		logger.info("User clicks the Login link at the bottom of Register page...."); 
 		 RegisterPage rp = new RegisterPage(BaseClass.getDriver());
 		 rp.clickLoginLinkRP();		 
 	}
+	
 
 	@Then("Sign In page must be displayed")
 	public void sign_in_page_must_be_displayed() {
@@ -171,6 +178,7 @@ public class RegisterSteps {
 		System.out.println("The login button is found:"+display);
 		Assert.assertTrue(display);
 	}
+	
 	
 	@Given("User enters a valid username {string} and password  {string} and password confirmation {string} details")
 	public void user_enters_a_valid_username_and_password_and_password_confirmation_details(String user, String pwd1, String pwd2) throws InterruptedException {
