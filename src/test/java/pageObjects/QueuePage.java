@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import Factory.BaseClass;
+
 public class QueuePage extends BasePage{
 
 	public QueuePage(WebDriver driver) {
@@ -70,4 +72,10 @@ public class QueuePage extends BasePage{
 	}
 	
 	
+	
+	public void Click_Tryhere()
+	{
+		DataStructurePage dp = new DataStructurePage(BaseClass.getDriver());
+		dp.click_DS_TimeComplexity_TryhereBtn();
+	}
 }
