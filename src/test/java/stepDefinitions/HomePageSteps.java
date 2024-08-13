@@ -2,7 +2,6 @@ package stepDefinitions;
 
 import java.util.Properties;
 
-import org.apache.commons.collections4.bag.SynchronizedSortedBag;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -13,7 +12,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.GetStartedPage;
 import pageObjects.HomePage;
-import pageObjects.RegisterPage;
 
 public class HomePageSteps {
 	WebDriver driver;
@@ -76,9 +74,9 @@ public class HomePageSteps {
 		case "Tree":status = hp.checkTreePageDisplay();Assert.assertTrue(status);break;
 		case "Graph":status = hp.checkGraphPageDisplay();Assert.assertTrue(status);break;
 		default: System.out.println("Unable to find the page....");Assert.assertTrue(status);break;
-		}
-		
+		}		
 	}
+	
 	
 	@When("User clicks on {string} value in DataStructures drop down")
 	public void user_clicks_on_value_in_data_structures_drop_down(String topic) throws InterruptedException {

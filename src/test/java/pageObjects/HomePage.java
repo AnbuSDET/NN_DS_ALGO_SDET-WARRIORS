@@ -12,7 +12,6 @@ public class HomePage extends BasePage{
 
 	public HomePage(WebDriver driver) {
 		super(driver);
-		System.out.println("print");
 	}
 	
 	//-----------WebElements-----------------
@@ -242,10 +241,6 @@ public class HomePage extends BasePage{
 		boolean display = GraphPage.isDisplayed();
 	    return display;
 	}
-	
-	
-	
-
 	
 
 }
