@@ -1,7 +1,7 @@
 Feature: To test the functionality of Login
 
   Background: 
-    Given User clicks the GetStarted Button at start page
+    Given User clicks the GetStarted button at start page
     Given User clicks the Sign In link
 
   Scenario: Test login with valid credentials to check 'you are logged in' message at home page

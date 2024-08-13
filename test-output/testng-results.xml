@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="12" passed="8" failed="4" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-13T11:02:25 CDT" name="Default suite" finished-at="2024-08-13T11:03:37 CDT" duration-ms="71548">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-08-13T11:02:25 CDT" name="Default test" finished-at="2024-08-13T11:03:37 CDT" duration-ms="71548">
+      <class name="testRunner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:02:25 CDT" name="setUpClass" finished-at="2024-08-13T11:02:26 CDT" duration-ms="729" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5617168c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:02:26 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-13T11:02:33 CDT" duration-ms="6711" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test to register a new user with valid details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the functionality of Register page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:02:33 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-13T11:02:38 CDT" duration-ms="5041" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test to register a new user with valid details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the functionality of Register page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:02:38 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-13T11:02:45 CDT" duration-ms="7024" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test to register a new user with an existing password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the functionality of Register page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:02:45 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-13T11:02:50 CDT" duration-ms="4927" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test to register a new user with different password and password confirmation details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the functionality of Register page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:02:50 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-13T11:02:55 CDT" duration-ms="5083" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test to register a new user with an existing username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the functionality of Register page"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at stepDefinitions.RegisterSteps.error_message_stating_username_already_exists_should_be_displayed(RegisterSteps.java:125)
+at ✽.Error message stating username already exists should be displayed(file:///C:/Users/jayau/OneDrive/Desktop/GIT-NumpyNinja/NN_DS_ALO_SDET-WARRIORS/./FeatureFiles/Register.feature:30)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:02:55 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-13T11:03:00 CDT" duration-ms="5569" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test to register a new user with unaccepted password details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the functionality of Register page"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at stepDefinitions.RegisterSteps.error_message_stating_password_setting_rules_should_be_displayed(RegisterSteps.java:156)
+at ✽.Error message stating password setting rules should be displayed(file:///C:/Users/jayau/OneDrive/Desktop/GIT-NumpyNinja/NN_DS_ALO_SDET-WARRIORS/./FeatureFiles/Register.feature:36)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:03:00 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-13T11:03:07 CDT" duration-ms="6987" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test to register a new user with unaccepted password details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the functionality of Register page"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at stepDefinitions.RegisterSteps.error_message_stating_password_setting_rules_should_be_displayed(RegisterSteps.java:156)
+at ✽.Error message stating password setting rules should be displayed(file:///C:/Users/jayau/OneDrive/Desktop/GIT-NumpyNinja/NN_DS_ALO_SDET-WARRIORS/./FeatureFiles/Register.feature:36)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:03:07 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-13T11:03:13 CDT" duration-ms="5513" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test to register a new user with unaccepted password details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the functionality of Register page"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at stepDefinitions.RegisterSteps.error_message_stating_password_setting_rules_should_be_displayed(RegisterSteps.java:156)
+at ✽.Error message stating password setting rules should be displayed(file:///C:/Users/jayau/OneDrive/Desktop/GIT-NumpyNinja/NN_DS_ALO_SDET-WARRIORS/./FeatureFiles/Register.feature:36)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:03:13 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-13T11:03:18 CDT" duration-ms="4791" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test to move to login page from register page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the functionality of Register page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:03:18 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-13T11:03:23 CDT" duration-ms="5017" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test to register a new user without providing username or password or password confirmation details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the functionality of Register page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:03:23 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-13T11:03:28 CDT" duration-ms="4858" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test to register a new user without providing username or password or password confirmation details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the functionality of Register page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:03:28 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-13T11:03:33 CDT" duration-ms="5737" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test to register a new user without providing username or password or password confirmation details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the functionality of Register page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestRunner@6f204a1a]" started-at="2024-08-13T11:03:33 CDT" name="tearDownClass" finished-at="2024-08-13T11:03:37 CDT" duration-ms="3493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunner.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
