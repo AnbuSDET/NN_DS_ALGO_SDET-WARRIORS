@@ -6,6 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class HomePage extends BasePage{
 
@@ -26,6 +27,27 @@ public class HomePage extends BasePage{
 	
 	@FindBy(xpath="//ul/a[@href='#']/following-sibling::a[1]")
 	private WebElement UsernameLink;
+	
+	@FindBy(xpath="//a[@data-toggle='dropdown']")
+	private WebElement DataStructureDropDown;
+	
+	@FindBy(xpath="//a[normalize-space()='Arrays']")
+	private WebElement DS_Arrays_dropdown;
+	
+	@FindBy(xpath="//a[normalize-space()='Linked List']")
+	private WebElement DS_LinkedList_dropdown;
+	
+	@FindBy(xpath="//a[normalize-space()='Stack']")
+	private WebElement DS_Stack_dropdown;
+	
+	@FindBy(xpath="//a[normalize-space()='Queue']")
+	private WebElement DS_Queue_dropdown;
+	
+	@FindBy(xpath="//a[normalize-space()='Tree']")
+	private WebElement DS_Tree_dropdown;
+	
+	@FindBy(xpath="//a[normalize-space()='Graph']")
+	private WebElement DS_Graph_dropdown;
 	
 	@FindBy (xpath="//a[contains(text(),'Get Started')]")
 	private List<WebElement> HomepageGetStartedBtnList;
@@ -61,11 +83,36 @@ public class HomePage extends BasePage{
 	private WebElement NewAccCreatedMsg;   //----after Registering a new user
 	
 	
+	@FindBy(xpath="//h4[normalize-space()='Data Structures-Introduction']")
+	private WebElement DS_Intro_Page;
+	
+	@FindBy(xpath="//h4[normalize-space()='Array']")
+	private WebElement ArrayPage;
+	
+	@FindBy(xpath="//h4[normalize-space()='Linked List']")
+	private WebElement LinkedListPage;
+	
+	@FindBy(xpath="//h4[normalize-space()='Stack']")
+	private WebElement StackPage;
+	
+	@FindBy(xpath="//h4[normalize-space()='Queue']")
+	private WebElement QueuePage;
+	
+	@FindBy(xpath="//h4[normalize-space()='Tree']")
+	private WebElement TreePage;
+	
+	@FindBy(xpath="//h4[normalize-space()='Graph']")
+	private WebElement GraphPage;
+	
 	//------------------Methods---------------
 	
 	public boolean NumpyNinjaLinkDisplay() {
 		boolean display = NumpyNinjaLink.isDisplayed();
 		return display;
+	}
+	
+	public void clickNumpyNinjaLink() {
+		NumpyNinjaLink.click();
 	}
 	
 	public void clickSigIn() {
@@ -129,6 +176,74 @@ public class HomePage extends BasePage{
 	public void clickGraphGetStarted(){
 		GraphGetStartedBtn.click();
 	}
+	
+	public void clickArrayDropdown() throws InterruptedException   {
+		DataStructureDropDown.click();
+		DS_Arrays_dropdown.click();
+		}
+	
+	public void clickLinkedListDropdown() {
+		DataStructureDropDown.click();
+		DS_LinkedList_dropdown.click();
+	}
+	
+	public void clickStackDropdown(){
+		DataStructureDropDown.click();
+		DS_Stack_dropdown.click();
+	}
+	
+	public void clickQueueDropdown() {
+		DataStructureDropDown.click();
+		DS_Queue_dropdown.click();
+		}
+	
+	public void clickTreeDropdown() {
+		DataStructureDropDown.click();
+		DS_Tree_dropdown.click();
+	}
+	
+	public void clickGraphDropdown(){
+		DataStructureDropDown.click();
+		DS_Graph_dropdown.click();
+	}
+	
+	
+	public boolean checkDS_Intro_PageDisplay() {
+		boolean display = DS_Intro_Page.isDisplayed();
+		return display;
+	}
+	
+	public boolean checkLinkedListPageDisplay() {
+		boolean display = LinkedListPage.isDisplayed();
+		return display;
+	}
+	
+	public boolean checkStackPageDisplay() {
+		boolean display = StackPage.isDisplayed();
+		return display;
+	}
+	
+	public boolean checkArrayPageDisplay() {
+		boolean display = ArrayPage.isDisplayed();
+		return display;
+	}
+	
+	public boolean checkQueuePageDisplay() {
+		boolean display = QueuePage.isDisplayed();
+		return display;
+	}
+	
+	public boolean checkTreePageDisplay() {
+		boolean display = TreePage.isDisplayed();
+		return display;
+	}
+	
+	public boolean checkGraphPageDisplay() {
+		boolean display = GraphPage.isDisplayed();
+	    return display;
+	}
+	
+	
 	
 
 	
