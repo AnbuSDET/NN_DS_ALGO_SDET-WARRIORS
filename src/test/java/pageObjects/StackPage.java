@@ -17,19 +17,19 @@ public class StackPage extends BasePage {
 	@FindBy(xpath="//a[@href=\'stack\']")
 	private WebElement GetStartedStackBtn;
 	
-	@FindBy(xpath="//a[@href=\'operations-in-stack\']")
+	@FindBy(xpath="//a[@href='operations-in-stack']")
 	private WebElement StackOperationsBtn;
 	
-	@FindBy(xpath="a[@href=\"/stack/implementation/\"]")
+	@FindBy(xpath="//a[@href='implementation']")
 	private WebElement StackImplementationBtn;
 	
-	@FindBy(xpath="//a[@href=\"/stack/stack-applications/\"]")
+	@FindBy(xpath="//a[@href='stack-applications']")
 	private WebElement StackApplicationBtn;
 	
 	@FindBy(xpath="//a[@href=\"/stack/practice\"]")
 	private WebElement StackPracticeQnsBtn;
 	
-	@FindBy(xpath="//a[@href=\"/tryEditor\"]")
+	@FindBy(xpath="//a[@href='/tryEditor']")
 	private WebElement TryHereBtn;
 	
 	//----------------Variables-------------------
@@ -72,6 +72,28 @@ public class StackPage extends BasePage {
 //		 boolean Check_URL = Online_Editor_Console_URL.equals(Current_URL);	
 //		 return Check_URL;
 //	}
-
+	public void click_Implementations() {
+		StackImplementationBtn.click();
+	}
+	
+	public boolean check_StImplementationsPage()
+	{
+		String Current_URL=BaseClass.getDriver().getCurrentUrl();
+			 boolean Check_URL = Stack_Implementations_URL.equals(Current_URL);	
+			 return Check_URL;
+	}
+	
+	public void click_Applications() {
+		StackApplicationBtn.click();
+	}
+	
+	public boolean check_StApplicationsPage()
+	{
+		String Current_URL=BaseClass.getDriver().getCurrentUrl();
+			 boolean Check_URL = Stack_Applications_URL.equals(Current_URL);	
+			 return Check_URL;
+	}
+	
+	
 	
 	}
