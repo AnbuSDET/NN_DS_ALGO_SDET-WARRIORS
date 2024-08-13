@@ -6,6 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class HomePage extends BasePage{
 
@@ -27,6 +28,27 @@ public class HomePage extends BasePage{
 	@FindBy(xpath="//ul/a[@href='#']/following-sibling::a[1]")
 	private WebElement UsernameLink;
 	
+	@FindBy(xpath="//a[@data-toggle='dropdown']")
+	private WebElement DataStructureDropDown;
+	
+	@FindBy(xpath="//a[normalize-space()='Arrays']")
+	private WebElement DS_Arrays_dropdown;
+	
+	@FindBy(xpath="//a[normalize-space()='Linked List']")
+	private WebElement DS_LinkedList_dropdown;
+	
+	@FindBy(xpath="//a[normalize-space()='Stack']")
+	private WebElement DS_Stack_dropdown;
+	
+	@FindBy(xpath="//a[normalize-space()='Queue']")
+	private WebElement DS_Queue_dropdown;
+	
+	@FindBy(xpath="//a[normalize-space()='Tree']")
+	private WebElement DS_Tree_dropdown;
+	
+	@FindBy(xpath="//a[normalize-space()='Graph']")
+	private WebElement DS_Graph_dropdown;
+	
 	@FindBy (xpath="//a[contains(text(),'Get Started')]")
 	private List<WebElement> HomepageGetStartedBtnList;
 	
@@ -47,7 +69,6 @@ public class HomePage extends BasePage{
 	
 	@FindBy (xpath="//a[@href='tree']")
 	private WebElement TreeGetStartedBtn;
-	//-------try change
 	
 	@FindBy (xpath="//a[@href='graph']")
 	private WebElement GraphGetStartedBtn;
@@ -88,6 +109,10 @@ public class HomePage extends BasePage{
 	public boolean NumpyNinjaLinkDisplay() {
 		boolean display = NumpyNinjaLink.isDisplayed();
 		return display;
+	}
+	
+	public void clickNumpyNinjaLink() {
+		NumpyNinjaLink.click();
 	}
 	
 	public void clickSigIn() {
@@ -152,6 +177,37 @@ public class HomePage extends BasePage{
 		GraphGetStartedBtn.click();
 	}
 	
+	public void clickArrayDropdown() throws InterruptedException   {
+		DataStructureDropDown.click();
+		DS_Arrays_dropdown.click();
+		}
+	
+	public void clickLinkedListDropdown() {
+		DataStructureDropDown.click();
+		DS_LinkedList_dropdown.click();
+	}
+	
+	public void clickStackDropdown(){
+		DataStructureDropDown.click();
+		DS_Stack_dropdown.click();
+	}
+	
+	public void clickQueueDropdown() {
+		DataStructureDropDown.click();
+		DS_Queue_dropdown.click();
+		}
+	
+	public void clickTreeDropdown() {
+		DataStructureDropDown.click();
+		DS_Tree_dropdown.click();
+	}
+	
+	public void clickGraphDropdown(){
+		DataStructureDropDown.click();
+		DS_Graph_dropdown.click();
+	}
+	
+	
 	public boolean checkDS_Intro_PageDisplay() {
 		boolean display = DS_Intro_Page.isDisplayed();
 		return display;
@@ -184,8 +240,10 @@ public class HomePage extends BasePage{
 	
 	public boolean checkGraphPageDisplay() {
 		boolean display = GraphPage.isDisplayed();
-		return display;
+	    return display;
 	}
+	
+	
 	
 
 	
