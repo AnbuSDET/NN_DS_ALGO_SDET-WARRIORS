@@ -1,7 +1,7 @@
 Feature: To test the functionality of Register page
 
   Background: 
-    Given User clicks the GetStarted Button at start page
+    Given User clicks the GetStarted button at start page
     And User clicks the Register link at home page
 
   Scenario: Test to register a new user with valid details
