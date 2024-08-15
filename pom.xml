@@ -26,11 +26,20 @@
 	          <artifactId>maven-surefire-plugin</artifactId>
 	          <version>3.3.0</version>
 	          
-	          <configuration>
-				  <suiteXmlFiles>
+	           <configuration>
+	              <parallel>methods</parallel>
+	              <useUnlimitedThreads>true</useUnlimitedThreads>
+	              <suiteXmlFiles>
 					  <suiteXmlFile>testng.xml</suiteXmlFile>
 				  </suiteXmlFiles>
-			  </configuration>
+				  
+				  <properties>
+				       <property>
+				          <name>data-provider-thread-count</name>
+				          <value>2</value>
+				       </property>
+				  </properties>
+			   </configuration>
 			  
 	        </plugin>
 	        

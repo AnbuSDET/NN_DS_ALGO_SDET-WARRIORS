@@ -19,11 +19,13 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class BaseClass {
 
 	public static WebDriver driver;
-	public static Properties p;
-	public static Logger logger;
+	public  static Properties p;
+	public  static Logger logger;
 	
 	public static WebDriver initializeBrowser() throws IOException
 	{
+		  
+		
 		if (getProperties().getProperty("execution_env").equalsIgnoreCase("remote"))
 		{
 			DesiredCapabilities capabilities = new DesiredCapabilities();
