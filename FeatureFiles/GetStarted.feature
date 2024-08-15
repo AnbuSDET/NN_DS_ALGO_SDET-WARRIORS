@@ -1,11 +1,10 @@
+Feature: Testing the Start Page feature
 
-Feature: Testing the Start Page
-
-  Scenario: Testing the GetStarted Button
-    When I click the GetStarted Button 
+  Scenario: Testing the GetStarted button
+    When User clicks the GetStarted button at start page 
     Then Home page should be displayed
     
-  Scenario: Display of Copyright@NumpyNinja2021 at Start Page
+  Scenario: Verify the display of Copyright@NumpyNinja2021 at Start Page
      Then Copyright@NumpyNinja2021 is displayed at Start page
 
   

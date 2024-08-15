@@ -1,54 +1,78 @@
 package stepDefinitions;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.cucumber.java.en.*;
+import pageObjects.HomePage;
+import pageObjects.TreePage;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import org.testng.Assert;
 
 public class TreeSteps {
+    WebDriver driver;
+    HomePage homePage;
+    TreePage treePage;
 
-@Given("The user is logged in to the application with Valid credentials")
-public void the_user_is_logged_in_to_the_application_with_valid_credentials() {
-   
-	GetStartedPage gsp = new GetStartedPage(BaseClass.getDriver());
-	gsp.clickGetStartedSP();
-	HomePage hp =new HomePage(BaseClass.getDriver());
-	hp.clickSigIn();	
-	logger.info("User login with valid username and password..........");
-	SignInPage sp = new SignInPage(BaseClass.getDriver());
-	 sp.enterUsername("Testing");
-	 sp.enterpassword("Password@143");
-	 sp.clickLogin();
-    throw new io.cucumber.java.PendingException();
-}
+    @Given("User moves to the home page after logging into the application")
+    public void user_moves_to_home_page() {
+        // Set the path to the chromedriver executable
+     
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://dsportalapp.herokuapp.com/home");
+        homePage = new HomePage(driver);
+        treePage = new TreePage(driver);
+    }
 
-@When("The User clicks the Tree_Get Started button in the Home page")
-public void the_user_clicks_the_tree_get_started_button_in_the_home_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
+    @Given("the user is on the Homepage")
+    public void the_user_is_on_the_Homepage() {
+        // Verify the user is on the Homepage
+        String expectedUrl = "https://dsportalapp.herokuapp.com/home";
+        String actualUrl = driver.getCurrentUrl();
+        Assert.assertEquals(actualUrl, expectedUrl, "User is not on the Homepage!");
+    }
 
-@Then("The user should be able to navigate to the Tree Page")
-public void the_user_should_be_able_to_navigate_to_the_tree_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
+    @When("the user clicks the {string} button on the Homepage")
+    public void the_user_clicks_button_on_Homepage(String buttonName) {
+        // Click the specified button on the Homepage
+        if (buttonName.equals("Tree_Get Started")) {
+            homePage.clickTreeGetStartedButton();
+        }
+    }
 
-@Given("The user is in the DS Introduction page")
-public void the_user_is_in_the_ds_introduction_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
+    @Then("the user should be able to navigate to the Tree Page")
+    public void the_user_should_be_able_to_navigate_to_the_tree_page() {
+        // Verify navigation to the Tree Page
+        String expectedUrl = "https://dsportalapp.herokuapp.com/tree";
+        String actualUrl = driver.getCurrentUrl();
+        Assert.assertEquals(actualUrl, expectedUrl, "Navigation to Tree Page failed!");
+    }
 
-@When("The user clicks the sign out button")
-public void the_user_clicks_the_sign_out_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
+    @Given("the user is on the Overview of Trees page")
+    public void the_user_is_on_the_Overview_of_Trees_page() {
+        // Navigate to the Overview of Trees page
+        driver.get("https://dsportalapp.herokuapp.com/tree/overview");
+    }
 
-@Then("The user should be signed out successfully and got error message")
-public void the_user_should_be_signed_out_successfully_and_got_error_message() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
+    @When("the user clicks the {string} button")
+    public void the_user_clicks_button(String buttonName) {
+        // Click the specified button
+        if (buttonName.equals("Try_Here")) {
+            treePage.clickTryHereButton();
+        } else if (buttonName.equals("Run")) {
+            treePage.clickRunButton();
+        }
+    }
 
+    @When("the user types {string} in the Editor box")
+    public void the_user_types_in_Editor_box(String code) {
+        // Type the specified code in the Editor box
+        treePage.typeInEditorBox(code);
+    }
+
+    @Then("the user should see {string} in the console output")
+    public void the_user_should_see_in_console_output(String expectedOutput) {
+        // Verify the console output
+        String actualOutput = treePage.getConsoleOutput();
+        Assert.assertEquals(actualOutput, expectedOutput, "Console output is incorrect!");
+    }
 }

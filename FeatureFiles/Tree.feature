@@ -1,12 +1,13 @@
 Feature: Testing the functionalities of tree page
-Background: Login to the DS ALGO Application
+Background: 
+Given User moves to home page after login to application
 
-Given The user is logged in to the application with Valid credentials
+Scenario: Go to the homepage to treepage
+Given the user should be on the Homepage
 When  The User clicks the Tree_Get Started button in the Home page
 Then The user should be able to navigate to the Tree Page 
-
-Scenario: Testing the Sign out link in the DS Introduction page
-	
-	Given The user is in the DS Introduction page
-	When The user clicks the sign out button		
-	Then The user should be signed out successfully and got error message
+Scenario:
+ Testing the "Try Here" button in the Overview of Trees page
+Given User is in the Overview of Trees page and clicks Try Here button
+When User type print("Hello World") in the Editor box and clicks Run button
+Then User should see "Hello World"  in the console output
