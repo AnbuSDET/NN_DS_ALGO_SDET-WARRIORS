@@ -7,8 +7,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions (
 	       	  //features={".//FeatureFiles/"},
-		 	  //features={".//FeatureFiles/Home.feature"},
-		      features={".//FeatureFiles/GetStarted.feature"},
+		 	  features={".//FeatureFiles/Home.feature"},
+		      //features={".//FeatureFiles/GetStarted.feature"},
 		      //features ={".//FeatureFiles/SignIn.feature"},
 		      //features ={".//FeatureFiles/Register.feature"},
 			  //features={".//FeatureFiles/DataStructure.feature"},
@@ -27,17 +27,21 @@ import io.cucumber.testng.CucumberOptions;
 					   },
 			  dryRun = false,
 			  monochrome = true,
-			  publish = true
+			  publish = true,
 			  //tags="@sanity"  // this will execute scenarios tagged with @sanity
-			  //tags="@Trial"
+			  tags="@Trial"
 			  //tags="@sanity and @regression" //Scenarios tagged with both @sanity and @regression
 			  //tags="@sanity and not @regression" //Scenarios tagged with @sanity but not tagged with @regression
 			  //tags="@sanity or @regression" //Scenarios tagged with either @sanity or @regression	
 			  
 		)
 
-public class TestRunner extends AbstractTestNGCucumberTests {
+public class TestRunnerParallel extends AbstractTestNGCucumberTests {
 	
-  
-  
+	@Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+	    }
+	
 }
