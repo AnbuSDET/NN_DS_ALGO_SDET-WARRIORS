@@ -32,7 +32,7 @@ public class HooksCrossBrowser {
 	{
 		BaseClass.getLogger().info("Launch the app URL.........");
 		String browser = ConfigReader.getBrowserType();
-		driver= BaseClass.initializeBrowser(browser);
+		//driver= BaseClass.initializeBrowser(browser);
 	    Thread.sleep(3000);
 		p= BaseClass.getProperties();
 	    BaseClass.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
