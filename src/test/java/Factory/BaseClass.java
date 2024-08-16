@@ -22,7 +22,6 @@ public class BaseClass {
 	public static Properties p;
 	public static Logger logger;
 	
-	@SuppressWarnings("deprecation")
 	public static WebDriver initializeBrowser() throws IOException
 	{
 		if (getProperties().getProperty("execution_env").equalsIgnoreCase("remote"))
