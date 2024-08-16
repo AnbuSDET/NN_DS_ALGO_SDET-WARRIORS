@@ -14,6 +14,7 @@ Feature: To test the functionality of Login
   	  When User clicks on Login Button
   		Then Username should be displayed as a link at the home page
   
+  @Trial
 	 Scenario Outline: Test login with invalid Username or Password
 		  Given User enters a username "<username>" at Login page
 		  And User enters a password "<password>" at Login page
@@ -26,6 +27,7 @@ Feature: To test the functionality of Login
 		  | Testing  | Trial123@    |
 		  | Test123  | Trial123@    |
 	  
+	  @Trial
 	 Scenario Outline: Test login without entering Username or Password or both
 	    Given User enters a username "<username>" at Login page
 	    And User enters a password "<password>" at Login page
