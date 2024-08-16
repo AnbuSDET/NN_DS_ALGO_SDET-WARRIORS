@@ -5,9 +5,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions (
 		 	  //features={".//FeatureFiles/"},
+		     	//features={".//FeatureFiles/Home.feature"},
 		     	features={".//FeatureFiles/GetStarted.feature"},
-	          //features={".//FeatureFiles/Home.feature"},
-	          //features={".//FeatureFiles/SignIn.feature"},
+		  	    //features={".//FeatureFiles/SignIn.feature"},
 	          //features={".//FeatureFiles/Register.feature"},
 			  //features={".//FeatureFiles/DataStructure.feature"},
 		      //features={".//FeatureFiles/Array.feature"},
@@ -20,7 +20,8 @@ import io.cucumber.testng.CucumberOptions;
 			  glue = "stepDefinitions",
 			  plugin = {"pretty", "html:reports/myreport.html", 
 					  "rerun:target/rerun.txt",
-					  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+					  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+					  "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
 					},
 			  dryRun = false,
 			  monochrome = true,
