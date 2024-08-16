@@ -27,11 +27,20 @@
 	          <artifactId>maven-surefire-plugin</artifactId>
 	          <version>3.3.0</version>
 	          
-	          <configuration>
-				  <suiteXmlFiles>
-					  <suiteXmlFile>testng.xml</suiteXmlFile>
+	           <configuration>
+	              <parallel>methods</parallel>
+	            <!--  <useUnlimitedThreads>true</useUnlimitedThreads> -->
+	              <suiteXmlFiles>
+					  <suiteXmlFile>ParallelTesting.xml</suiteXmlFile>
 				  </suiteXmlFiles>
-			  </configuration>
+				  
+				  <properties>
+				       <property>
+				          <name>data-provider-thread-count</name>
+				          <value>4</value>
+				       </property>
+				  </properties>
+			   </configuration>
 			  
 	        </plugin>
 	        
@@ -152,6 +161,13 @@
 	    <artifactId>ashot</artifactId>
 	    <version>1.5.4</version>
 	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.3.1</version>
+		</dependency>
 
 	
  </dependencies>

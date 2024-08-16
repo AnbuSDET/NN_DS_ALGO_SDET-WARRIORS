@@ -1,7 +1,11 @@
 package testRunner;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 
+import org.testng.annotations.Parameters;
+
+import Utilities.ConfigReader;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
@@ -11,7 +15,6 @@ import io.cucumber.testng.CucumberOptions;
 		      features={".//FeatureFiles/GetStarted.feature"},
 		      //features ={".//FeatureFiles/SignIn.feature"},
 		      //features ={".//FeatureFiles/Register.feature"},
-
 			  //features={".//FeatureFiles/DataStructure.feature"},
 		      //features={".//FeatureFiles/Array.feature"},
 	          //features={".//FeatureFiles/LinkedList.feature"},
@@ -23,14 +26,9 @@ import io.cucumber.testng.CucumberOptions;
 			  glue = "stepDefinitions",
 			  plugin = {"pretty", "html:reports/myreport.html", //----Cucumber Report
 					  "rerun:target/rerun.txt",
-
-					
 					  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",//---Extent Report 
-             "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-
 					  "timeline:target/timeline" //-----Timeline report
 					   },
-
 			  dryRun = false,
 			  monochrome = true,
 			  publish = true
@@ -42,8 +40,21 @@ import io.cucumber.testng.CucumberOptions;
 			  
 		)
 
-public class TestRunner extends AbstractTestNGCucumberTests {
+
+public class TestRunnerCrossBrowser extends AbstractTestNGCucumberTests {
 	
-  
-  
-}
+	    
+		@Override
+	    @DataProvider(parallel = true)
+	    public Object[][] scenarios() {
+	        return super.scenarios();
+		    }
+		
+		
+		@BeforeTest
+		@Parameters({"browser"})
+			public void defineBrowser(String browser) throws Throwable {
+				ConfigReader.setBrowserType(browser);
+		}
+		
+	}
