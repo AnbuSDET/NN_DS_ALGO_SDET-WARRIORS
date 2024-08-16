@@ -28,15 +28,15 @@
 	          
 	           <configuration>
 	              <parallel>methods</parallel>
-	              <useUnlimitedThreads>true</useUnlimitedThreads>
+	            <!--  <useUnlimitedThreads>true</useUnlimitedThreads> -->
 	              <suiteXmlFiles>
-					  <suiteXmlFile>testng.xml</suiteXmlFile>
+					  <suiteXmlFile>ParallelTesting.xml</suiteXmlFile>
 				  </suiteXmlFiles>
 				  
 				  <properties>
 				       <property>
 				          <name>data-provider-thread-count</name>
-				          <value>2</value>
+				          <value>4</value>
 				       </property>
 				  </properties>
 			   </configuration>
