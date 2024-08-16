@@ -1,13 +1,15 @@
 package stepDefinitions;
 
-import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Parameters;
+
 import Factory.BaseClass;
+import Utilities.ConfigReader;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
@@ -15,19 +17,18 @@ import io.cucumber.java.Scenario;
 
 
 public class Hooks {
-	WebDriver driver;
+	ThreadLocal<WebDriver> driver;
 	Properties p;
-	
-	
+
 	@Before
-	public void setup() throws IOException, InterruptedException
+	public void setup() throws Throwable
 	{
 		BaseClass.getLogger().info("Launch the app URL.........");
 		driver= BaseClass.initializeBrowser();
 		p= BaseClass.getProperties();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get(p.getProperty("appURL"));
-		driver.manage().window().maximize();
+		BaseClass.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		BaseClass.getDriver().get(p.getProperty("appURL"));
+		//BaseClass.getDriver().manage().window().maximize();
 		
 		BaseClass.getLogger().info("Application launched.......");
    	}
@@ -36,7 +37,8 @@ public class Hooks {
     @After
 	public void tearDown()
 	{
-		driver.quit();
+    	BaseClass.getDriver().quit();
+    	driver.remove();
 	}
 	
 	
