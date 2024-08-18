@@ -111,7 +111,7 @@ public class DataStructurePage extends BasePage{
 	  // Python Editor -> Entering Valid Codes 
 	public void Click_DS_PythonEditor_Runbtn_ValidCodes()		
 	
-	{	   			
+	{	  		
 		
 			BaseClass.getDriver().findElement(By.cssSelector(".CodeMirror-scroll")).click();
 	        JavascriptExecutor js=(JavascriptExecutor) BaseClass.getDriver();
