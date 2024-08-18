@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions (
 	       	  //features={".//FeatureFiles/"},
 		 	  //features={".//FeatureFiles/Home.feature"},
-		      features={".//FeatureFiles/GetStarted.feature"},
+		     // features={".//FeatureFiles/GetStarted.feature"},
 		      //features ={".//FeatureFiles/SignIn.feature"},
 		      //features ={".//FeatureFiles/Register.feature"},
 
