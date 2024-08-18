@@ -2,7 +2,8 @@ Feature: To test the features of Home Page
 
   Background: 
     Given User clicks the GetStarted button at start page
-
+    
+  @Trial
   Scenario Outline: Testing click of "<topic>" Get Started button at Home page should NOT ENTER into "<topic>" page WITHOUT sign in .
 	  When Click Get Started button of "<topic>" topic login
 	  Then You are not logged in error message is displayed
@@ -16,6 +17,7 @@ Feature: To test the features of Home Page
 	  | Queue         |
 	  | Tree          |
 	  | Graph         |
+  
   
   Scenario Outline: Testing click of "<topic>" Get Started button at Home page SHOULD ENTER into "<topic>" page AFTER sign in.
 	  Given User sign in to the app with valid username "username" and "password"
@@ -32,6 +34,7 @@ Feature: To test the features of Home Page
 	  | Tree          |
 	  | Graph         |
   
+  
   Scenario Outline: Testing selection of any "<topic>" topic from Data Structures drop-down WITHOUT sign in should throw a YOU ARE NOT LOGGED IN error message
 	  When User clicks on "<topic>" value in DataStructures drop down
 	  Then You are not logged in error message is displayed
@@ -44,6 +47,7 @@ Feature: To test the features of Home Page
 	  | Queue         |
 	  | Tree          |
 	  | Graph         |
+  
   
   Scenario Outline: Testing selection of any "<topic>" topic from Data Structures drop-down AFTER sign in SHOULD ENTER into that "<topic>" page
 	  Given User sign in to the app with valid username "username" and "password"

@@ -6,12 +6,11 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions (
-	       	  //features={".//FeatureFiles/"},
+	       	  features={".//FeatureFiles/"},
 		 	  //features={".//FeatureFiles/Home.feature"},
-		      features={".//FeatureFiles/GetStarted.feature"},
+		      //features={".//FeatureFiles/GetStarted.feature"},
 		      //features ={".//FeatureFiles/SignIn.feature"},
 		      //features ={".//FeatureFiles/Register.feature"},
-
 			  //features={".//FeatureFiles/DataStructure.feature"},
 		      //features={".//FeatureFiles/Array.feature"},
 	          //features={".//FeatureFiles/LinkedList.feature"},
@@ -23,18 +22,12 @@ import io.cucumber.testng.CucumberOptions;
 			  glue = "stepDefinitions",
 			  plugin = {"pretty", "html:reports/myreport.html", //----Cucumber Report
 					  "rerun:target/rerun.txt",
-
-					
 					  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",//---Extent Report 
-             "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-
 					  "timeline:target/timeline" //-----Timeline report
 					   },
-
 			  dryRun = false,
 			  monochrome = true,
 			  publish = true
-			  // tags="@test"
 			  //tags="@sanity"  // this will execute scenarios tagged with @sanity
 			  //tags="@Trial"
 			  //tags="@sanity and @regression" //Scenarios tagged with both @sanity and @regression
@@ -43,8 +36,12 @@ import io.cucumber.testng.CucumberOptions;
 			  
 		)
 
-public class TestRunner extends AbstractTestNGCucumberTests {
+public class TestRunnerParallel extends AbstractTestNGCucumberTests {
 	
-  
-  
+	@Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+	    }
+	
 }

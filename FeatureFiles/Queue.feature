@@ -182,4 +182,3 @@ Scenario: Testing the Queue Operations Python Editor with InValid codes
 Given The User is in the Queue Operations Page Python Editor Page 
 When  The user write the InValid python code in Editor and Clicks Run button
 Then  The User should be able to see error message in the pop message
-
