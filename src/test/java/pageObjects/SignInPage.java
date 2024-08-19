@@ -32,7 +32,6 @@ public class SignInPage extends BasePage {
 	
 	@FindBy (xpath="[@name='csrfmiddlewaretoken']")
 	private WebElement plsFillTheFieldWarningMsg;
-//	------alert message xpath
 	
 	
 	//--------------Methods----------------
@@ -95,8 +94,9 @@ public class SignInPage extends BasePage {
 			  validationMessage = (String) js.executeScript("return arguments[0].validationMessage;", password);
 			 }
 		
-		return validationMessage;
-		
+		return validationMessage;		
 	}
+	
+	
 
 }
