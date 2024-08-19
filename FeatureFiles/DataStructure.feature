@@ -43,7 +43,7 @@ Then The user should be redirected to the Practice question Page
  When The user clicks the Try here button in this Page
  Then The User should be redirected to Python Editor page
  
- 
+ @test
 Scenario: Testing the DS-Python Try Editor page without any Python codes
 
 Given The User is in the DS-Python Try Editor page  
