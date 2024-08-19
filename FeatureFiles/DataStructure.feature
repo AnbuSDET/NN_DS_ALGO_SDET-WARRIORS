@@ -1,4 +1,4 @@
-Feature: Testing the Data Structures Intoduction Page
+Feature: Testing the Data Structures Introduction Page
 
 Background: Login to the Ds-Algo Page
 
