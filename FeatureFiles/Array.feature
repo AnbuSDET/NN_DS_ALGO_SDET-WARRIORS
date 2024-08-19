@@ -278,7 +278,7 @@ Then The should see the submission successful message '<Success_RowNumer_9>' in 
 
 
 
-## Max Consecutive one Page -> Submit button
+## Max Consecutive one Page -> Submit button  # Negative Scenario --> It will fail  --> Bug
 
 
 Scenario: Testing the Submit button with valid codes in Max Consecutive one Page Python Editor
@@ -289,7 +289,7 @@ Then The user should see the success message '<Success_RowNumer_10>' in the cons
 
 
 
-## Find Numbers with Even number of digits question--> Submit Button  # Negative Scenario --> It will fail  --> Bug
+## Find Numbers with Even number of digits question--> Submit Button  
 
 
 Scenario: Testing the Submit button with valid codes in Find Numbers with Even number of digits question page Python Editor 
@@ -301,7 +301,7 @@ Then The should see the submission successful message '<Success_RowNumer_11>' in
 
 
 
-## Python Editor Squares of Sorted array  -> Submit button 
+## Python Editor Squares of Sorted array  -> Submit button # Negative Scenario --> It will fail  --> Bug
 
 
 Scenario: Testing the Submit button valid codes in Squares of a Sorted Array
