@@ -23,8 +23,10 @@ import io.cucumber.testng.CucumberOptions;
 			  plugin = {"pretty", "html:reports/myreport.html", //----Cucumber Report
 					  "rerun:target/rerun.txt",
 					  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",//---Extent Report 
-					  "timeline:target/timeline" //-----Timeline report
-					   },
+					  "timeline:target/timeline" ,//-----Timeline report
+					  "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
+	   
+	       	  },
 			  dryRun = false,
 			  monochrome = true,
 			  publish = true
