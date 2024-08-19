@@ -34,6 +34,7 @@ import io.cucumber.testng.CucumberOptions;
 			  dryRun = false,
 			  monochrome = true,
 			  publish = true
+			  // tags="@test"
 			  //tags="@sanity"  // this will execute scenarios tagged with @sanity
 			  //tags="@Trial"
 			  //tags="@sanity and @regression" //Scenarios tagged with both @sanity and @regression
