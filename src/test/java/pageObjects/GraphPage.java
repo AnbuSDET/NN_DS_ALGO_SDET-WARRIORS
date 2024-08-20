@@ -67,9 +67,7 @@ public class GraphPage extends BasePage {
 		 return Check_URL;
 	}
 
-
 	public void click_GraphRepresentationsLink() {
-
 		// TODO Auto-generated method stub
 		GraphRepresentationBtn.click();
 	}
@@ -80,8 +78,7 @@ public class GraphPage extends BasePage {
 		String Current_URL=BaseClass.getDriver().getCurrentUrl();
 		 boolean Check_URL = GraphRepersentations_Page_URL.equals(Current_URL);	
 		 return Check_URL;
-
-	}
+  }	
 	
 }
 

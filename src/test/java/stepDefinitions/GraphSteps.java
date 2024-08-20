@@ -11,17 +11,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.GraphPage;
 
-import java.util.Properties;
-
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-
-import Factory.BaseClass;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import pageObjects.GraphPage;
 
 public class GraphSteps {
 	
@@ -31,7 +20,7 @@ public class GraphSteps {
 	
 	@Given("clicking the get started button of Graph")
 	public void clicking_the_get_started_button_of_graph() {
-		
+
 		GraphPage gp=new GraphPage(BaseClass.getDriver());
 		gp.click_Getstarted();
 		logger.info("Getstarted button clicked............");
@@ -70,6 +59,7 @@ public class GraphSteps {
 		GraphPage gp=new GraphPage(BaseClass.getDriver());
 		gp.click_GraphRepresentationsLink();
 		logger.info("GraphRepersentations link  clicked............");
+
 	}
 
 	@Then("GraphRepresentations page will be displayed")
@@ -98,4 +88,6 @@ public class GraphSteps {
 		
 	}
 
-	}
+
+	
+}

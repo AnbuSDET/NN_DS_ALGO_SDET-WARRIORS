@@ -1,6 +1,7 @@
 Feature: Testing the Tree page and its functionalities in DS-ALGO app
 
   Background: 
+
      Given User move to home page after login to application
      And the user click the tree Getstarted button
      
@@ -361,8 +362,8 @@ Scenario: Testing the online editor in the Implementation Of BST page with valid
 	    Then The User should should be in the same page with No error message
 	    
 	    
-	    	#PracticeQuestions
- #	
+	    	
+ 	
  	Scenario: Testing the Practice Questions link in the Overviewoftrees Page
 
 Given user clicks the overviewoftrees link												 

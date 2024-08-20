@@ -13,6 +13,7 @@ public class TreePage extends BasePage{
 	
 	public TreePage(WebDriver driver) {
 		super(driver);
+
 	}
 	
 	//----------------------------WebElements----------------------------
@@ -102,7 +103,10 @@ public class TreePage extends BasePage{
 
 	public void click_OverviewofTreeLink() {
 		OverviewoftreeBtn.click();
-	}
+
+	}	
+	
+	
 
 	public boolean check_Overview_of_TreePage() {
 		 String Current_URL=BaseClass.getDriver().getCurrentUrl();
@@ -242,7 +246,9 @@ public class TreePage extends BasePage{
 		String Current_URL=BaseClass.getDriver().getCurrentUrl();
 		 boolean Check_URL = ImplementationOfBST_URL.equals(Current_URL);	
 		 return Check_URL;			
-	}
+	}	
+
+	
 	
 	//PracticeQns
 			public void click_PracticeQnsLink() {

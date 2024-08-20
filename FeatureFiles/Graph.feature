@@ -51,5 +51,7 @@ Feature: Testing the Graph page and its functionalities in D-ALGO app
 	Scenario: Testing the online editor in the Graph Representations page with no code at all
 		  Given User moves to the graph representations page and clicks the Try here button in this Page
 		  When The user clicks the Run without any Codes
+
 	    Then The User should should be in the same page with No error message
+
 

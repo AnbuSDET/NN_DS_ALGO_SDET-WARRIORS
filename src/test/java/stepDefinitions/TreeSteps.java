@@ -17,6 +17,7 @@ public class TreeSteps {
 		Properties p;
 		Logger logger=BaseClass.getLogger();
 		
+
 		@Given("the user click the tree Getstarted button")
 		public void the_user_click_the_tree_getstarted_button() {
 		
@@ -93,22 +94,22 @@ public class TreeSteps {
 		@Then("user will navigate to typesoftrees page")
 		public void types_of_trees_page_will_be_displayed() {
 			TreePage tp=new TreePage(BaseClass.getDriver());
+
 			boolean types_of_trees_Page=tp.check_types_of_treesPage();
+
 			Assert.assertEquals(types_of_trees_Page, true);
 			logger.info("types_of_trees page dispalyed.........");
 		 }
 		
+
 		@When("User moves to the types-of-trees page and clicks the Try here button in this Page")
 		public void user_moves_to_the_types_of_trees_page_and_clicks_the_try_here_button_in_this_page() {
 		
 			TreePage tp=new TreePage(BaseClass.getDriver());
 			tp.click_types_of_treesLink();
 			tp.clickTryHerebutton();
-		}
+		}		
 
-
-
-		
 		//tree-traversals
 		@When("user clicks the tree-traversals link")
 		public void user_clicks_the_tree_traversals_link() {
@@ -125,6 +126,7 @@ public class TreeSteps {
 			logger.info("tree-traversals page dispalyed.........");
 		 }
 		
+
 		@When("User moves to the tree-traversals page and clicks the Try here button in this Page")
 		public void user_moves_to_the_tree_traversals_page_and_clicks_the_try_here_button_in_this_page() {
 			TreePage tp=new TreePage(BaseClass.getDriver());
@@ -134,7 +136,6 @@ public class TreeSteps {
 		}
 
 
-		
 		//traversals-illustration
 		@When("user clicks the traversals-illustration link")
 		public void user_clicks_the_traversals_illustration_link() {
@@ -151,6 +152,7 @@ public class TreeSteps {
 			logger.info("traversals-illustration page dispalyed.........");
 		 }
 		
+
 		@When("User moves to the traversals-illustration page and clicks the Try here button in this Page")
 		public void user_moves_to_the_traversals_illustration_page_and_clicks_the_try_here_button_in_this_page() {
 			TreePage tp=new TreePage(BaseClass.getDriver());
@@ -159,7 +161,7 @@ public class TreeSteps {
 			
 		}
 
-		
+
 		//binary-trees
 		@When("user clicks the binary-trees link")
 		public void user_clicks_the_binary_trees_link() {
@@ -176,6 +178,7 @@ public class TreeSteps {
 			logger.info("binary-trees page dispalyed.........");
 		 }
 		
+
 		@When("User moves to the binary-trees page and clicks the Try here button in this Page")
 		public void user_moves_to_the_binary_trees_page_and_clicks_the_try_here_button_in_this_page() {
 			TreePage tp=new TreePage(BaseClass.getDriver());
@@ -184,6 +187,7 @@ public class TreeSteps {
 			
 		}
 		
+
 		//types-of-binary-trees
 		@When("user clicks the types-of-binary-trees link")
 		public void user_clicks_types_of_binary_trees_link() {
@@ -199,6 +203,7 @@ public class TreeSteps {
 			Assert.assertEquals(types_of_binary_trees_Page, true);
 			logger.info("types-of-binary-trees page dispalyed.........");
 		 }
+
 		@When("User moves to the types-of-binary-trees page and clicks the Try here button in this Page")
 		public void user_moves_to_the_types_of_binary_trees_page_and_clicks_the_try_here_button_in_this_page() {
 			TreePage tp=new TreePage(BaseClass.getDriver());
@@ -207,6 +212,7 @@ public class TreeSteps {
 			
 		}
 		
+
 		
 		//implementation-in-python
 		@When("user clicks the implementation-in-python link")
@@ -224,6 +230,7 @@ public class TreeSteps {
 			logger.info("implementation-in-python page dispalyed.........");
 		 }
 		
+
 		@When("User moves to the implementation-in-python page and clicks the Try here button in this Page")
 		public void user_moves_to_the_implementation_in_python_page_and_clicks_the_try_here_button_in_this_page() {
 			TreePage tp=new TreePage(BaseClass.getDriver());
@@ -231,6 +238,7 @@ public class TreeSteps {
 			tp.clickTryHerebutton();
 			
 		}
+
 		//Binary Tree Traversals
 		@When("user clicks the Binary Tree Traversals link")
 		public void user_clicks_BinaryTreeTraversals_link() {
@@ -247,6 +255,7 @@ public class TreeSteps {
 			logger.info("Binary Tree Traversals page dispalyed.........");
 		 }
 		
+
 		@When("User moves to the Binary Tree Traversals page and clicks the Try here button in this Page")
 		public void user_moves_to_the_Binary_Tree_Traversals_page_and_clicks_the_try_here_button_in_this_page() {
 			TreePage tp=new TreePage(BaseClass.getDriver());
@@ -255,6 +264,7 @@ public class TreeSteps {
 			
 		}
 		
+
 		//Implementation of Binary Trees
 		@When("user clicks the Implementation of Binary Trees link")
 		public void user_clicks_ImplementationofBinaryTrees_link() {
@@ -271,6 +281,7 @@ public class TreeSteps {
 			logger.info("Implementation of Binary Trees page dispalyed.........");
 		 }
 		
+
 		@When("User moves to the Implementation of Binary Trees page and clicks the Try here button in this Page")
 		public void user_moves_to_the_Implementation_of_Binary_Trees_page_and_clicks_the_try_here_button_in_this_page() {
 			TreePage tp=new TreePage(BaseClass.getDriver());
@@ -279,7 +290,7 @@ public class TreeSteps {
 			
 		}
 		
-		
+
 		//Applications of Binary trees
 		@When("user clicks the Applications of Binary trees link")
 		public void user_clicks_ApplicationsofBinarytrees_link() {
@@ -296,6 +307,7 @@ public class TreeSteps {
 			logger.info("Applications of Binary trees page dispalyed.........");
 		 }
 
+
 		
 		@When("User moves to the Applications of Binary Trees page and clicks the Try here button in this Page")
 	public void user_moves_to_the_Applications_of_Binary_Tree_Trees_page_and_clicks_the_try_here_button_in_this_page() {
@@ -305,7 +317,7 @@ public class TreeSteps {
 			
 		}
 		
-		
+
 		//Binary Search Trees
 		@When("user clicks the Binary Search Trees link")
 		public void user_clicks_BinarySearchTrees_link() {
@@ -322,6 +334,7 @@ public class TreeSteps {
 			logger.info("Binary Search Trees dispalyed.........");
 		 }
 		
+
 		@When("User moves to the Binary Search Trees page and clicks the Try here button in this Page")
 		public void user_moves_to_the_Binary_Search__Trees_page_and_clicks_the_try_here_button_in_this_page() {
 			TreePage tp=new TreePage(BaseClass.getDriver());
@@ -330,6 +343,7 @@ public class TreeSteps {
 			
 		}
 		
+
 		//Implementation Of BST
 		@When("user clicks the Implementation Of BST link")
 		public void user_clicks_ImplementationOfBST_link() {
@@ -345,6 +359,7 @@ public class TreeSteps {
 			Assert.assertEquals(ImplementationOfBST_Page, true);
 			logger.info("Implementation Of BST dispalyed.........");
 		 }
+
 		
 		@When("User moves to the Implementation Of BST page and clicks the Try here button in this Page")
 		public void user_moves_to_the_Implementation_of_BST_page_and_clicks_the_try_here_button_in_this_page() {
@@ -421,3 +436,6 @@ public class TreeSteps {
 		    } 
 		}
 }
+
+
+
