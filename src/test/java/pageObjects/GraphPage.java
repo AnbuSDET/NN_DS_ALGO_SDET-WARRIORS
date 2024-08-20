@@ -1,3 +1,4 @@
+
 package pageObjects;
 
 import org.openqa.selenium.WebDriver;
@@ -26,6 +27,7 @@ public class GraphPage extends BasePage {
 	
 	@FindBy(xpath="//a[normalize-space()='Graph Representations']")
 	private WebElement GraphRepresentationBtn;
+
 	
 	String Graph_HomePage_URL="https://dsportalapp.herokuapp.com/graph/";
 	
@@ -36,6 +38,7 @@ public class GraphPage extends BasePage {
 	
 	
 	//----------Methods--------------
+
 	public void click_Getstarted()
 	{
 		GraphGetStrdBtn.click();
@@ -52,7 +55,7 @@ public class GraphPage extends BasePage {
 	{
 		GraphBtn.click();
 	}
-	
+
 	public void clickTryHereBtn() {
 		TryHereBtn.click();
 	}
@@ -70,10 +73,12 @@ public class GraphPage extends BasePage {
 	}
 
 	public boolean check_GraphRepresentationsLink() {
+
 		// TODO Auto-generated method stub
 		String Current_URL=BaseClass.getDriver().getCurrentUrl();
 		 boolean Check_URL = GraphRepersentations_Page_URL.equals(Current_URL);	
 		 return Check_URL;
-	}
+  }	
 	
 }
+

@@ -17,14 +17,8 @@ public class TreeSteps {
 		Properties p;
 		Logger logger=BaseClass.getLogger();
 		
-		
-		@Given("User move to Tree page after login to application")
-		public void user_move_to_tree_page_after_login_to_application() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
-		}
-		
-		@Given("the user click the Tree Getstarted button")
+
+		@Given("the user click the tree Getstarted button")
 		public void the_user_click_the_tree_getstarted_button() {
 		
 			TreePage tp = new TreePage(BaseClass.getDriver());
@@ -100,11 +94,22 @@ public class TreeSteps {
 		@Then("user will navigate to typesoftrees page")
 		public void types_of_trees_page_will_be_displayed() {
 			TreePage tp=new TreePage(BaseClass.getDriver());
-			boolean     types_of_trees_Page=tp.check_types_of_treesPage();
+
+			boolean types_of_trees_Page=tp.check_types_of_treesPage();
+
 			Assert.assertEquals(types_of_trees_Page, true);
 			logger.info("types_of_trees page dispalyed.........");
 		 }
 		
+
+		@When("User moves to the types-of-trees page and clicks the Try here button in this Page")
+		public void user_moves_to_the_types_of_trees_page_and_clicks_the_try_here_button_in_this_page() {
+		
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			tp.click_types_of_treesLink();
+			tp.clickTryHerebutton();
+		}		
+
 		//tree-traversals
 		@When("user clicks the tree-traversals link")
 		public void user_clicks_the_tree_traversals_link() {
@@ -121,6 +126,16 @@ public class TreeSteps {
 			logger.info("tree-traversals page dispalyed.........");
 		 }
 		
+
+		@When("User moves to the tree-traversals page and clicks the Try here button in this Page")
+		public void user_moves_to_the_tree_traversals_page_and_clicks_the_try_here_button_in_this_page() {
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			tp.click_tree_traversalsLink();
+			tp.clickTryHerebutton();
+			
+		}
+
+
 		//traversals-illustration
 		@When("user clicks the traversals-illustration link")
 		public void user_clicks_the_traversals_illustration_link() {
@@ -137,6 +152,16 @@ public class TreeSteps {
 			logger.info("traversals-illustration page dispalyed.........");
 		 }
 		
+
+		@When("User moves to the traversals-illustration page and clicks the Try here button in this Page")
+		public void user_moves_to_the_traversals_illustration_page_and_clicks_the_try_here_button_in_this_page() {
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			tp.click_traversals_illustrationLink();
+			tp.clickTryHerebutton();
+			
+		}
+
+
 		//binary-trees
 		@When("user clicks the binary-trees link")
 		public void user_clicks_the_binary_trees_link() {
@@ -153,6 +178,16 @@ public class TreeSteps {
 			logger.info("binary-trees page dispalyed.........");
 		 }
 		
+
+		@When("User moves to the binary-trees page and clicks the Try here button in this Page")
+		public void user_moves_to_the_binary_trees_page_and_clicks_the_try_here_button_in_this_page() {
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			tp.click_binary_treesLink();
+			tp.clickTryHerebutton();
+			
+		}
+		
+
 		//types-of-binary-trees
 		@When("user clicks the types-of-binary-trees link")
 		public void user_clicks_types_of_binary_trees_link() {
@@ -168,6 +203,16 @@ public class TreeSteps {
 			Assert.assertEquals(types_of_binary_trees_Page, true);
 			logger.info("types-of-binary-trees page dispalyed.........");
 		 }
+
+		@When("User moves to the types-of-binary-trees page and clicks the Try here button in this Page")
+		public void user_moves_to_the_types_of_binary_trees_page_and_clicks_the_try_here_button_in_this_page() {
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			tp.click_types_of_binary_treesLink();
+			tp.clickTryHerebutton();
+			
+		}
+		
+
 		
 		//implementation-in-python
 		@When("user clicks the implementation-in-python link")
@@ -185,6 +230,15 @@ public class TreeSteps {
 			logger.info("implementation-in-python page dispalyed.........");
 		 }
 		
+
+		@When("User moves to the implementation-in-python page and clicks the Try here button in this Page")
+		public void user_moves_to_the_implementation_in_python_page_and_clicks_the_try_here_button_in_this_page() {
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			tp.click_implementation_in_pythonLink();
+			tp.clickTryHerebutton();
+			
+		}
+
 		//Binary Tree Traversals
 		@When("user clicks the Binary Tree Traversals link")
 		public void user_clicks_BinaryTreeTraversals_link() {
@@ -201,6 +255,16 @@ public class TreeSteps {
 			logger.info("Binary Tree Traversals page dispalyed.........");
 		 }
 		
+
+		@When("User moves to the Binary Tree Traversals page and clicks the Try here button in this Page")
+		public void user_moves_to_the_Binary_Tree_Traversals_page_and_clicks_the_try_here_button_in_this_page() {
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			tp.click_BinaryTreeTraversalsLink();
+			tp.clickTryHerebutton();
+			
+		}
+		
+
 		//Implementation of Binary Trees
 		@When("user clicks the Implementation of Binary Trees link")
 		public void user_clicks_ImplementationofBinaryTrees_link() {
@@ -217,6 +281,16 @@ public class TreeSteps {
 			logger.info("Implementation of Binary Trees page dispalyed.........");
 		 }
 		
+
+		@When("User moves to the Implementation of Binary Trees page and clicks the Try here button in this Page")
+		public void user_moves_to_the_Implementation_of_Binary_Trees_page_and_clicks_the_try_here_button_in_this_page() {
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			tp.click_ImplementationofBinaryTreesLink();
+			tp.clickTryHerebutton();
+			
+		}
+		
+
 		//Applications of Binary trees
 		@When("user clicks the Applications of Binary trees link")
 		public void user_clicks_ApplicationsofBinarytrees_link() {
@@ -232,6 +306,17 @@ public class TreeSteps {
 			Assert.assertEquals(ApplicationsofBinarytrees_Page, true);
 			logger.info("Applications of Binary trees page dispalyed.........");
 		 }
+
+
+		
+		@When("User moves to the Applications of Binary Trees page and clicks the Try here button in this Page")
+	public void user_moves_to_the_Applications_of_Binary_Tree_Trees_page_and_clicks_the_try_here_button_in_this_page() {
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			tp.click_ApplicationsofBinarytreesLink();
+			tp.clickTryHerebutton();
+			
+		}
+		
 
 		//Binary Search Trees
 		@When("user clicks the Binary Search Trees link")
@@ -249,6 +334,16 @@ public class TreeSteps {
 			logger.info("Binary Search Trees dispalyed.........");
 		 }
 		
+
+		@When("User moves to the Binary Search Trees page and clicks the Try here button in this Page")
+		public void user_moves_to_the_Binary_Search__Trees_page_and_clicks_the_try_here_button_in_this_page() {
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			tp.click_BinarySearchTreesLink();
+			tp.clickTryHerebutton();
+			
+		}
+		
+
 		//Implementation Of BST
 		@When("user clicks the Implementation Of BST link")
 		public void user_clicks_ImplementationOfBST_link() {
@@ -264,4 +359,83 @@ public class TreeSteps {
 			Assert.assertEquals(ImplementationOfBST_Page, true);
 			logger.info("Implementation Of BST dispalyed.........");
 		 }
+
+		
+		@When("User moves to the Implementation Of BST page and clicks the Try here button in this Page")
+		public void user_moves_to_the_Implementation_of_BST_page_and_clicks_the_try_here_button_in_this_page() {
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			tp.click_ImplementationOfBSTLink();
+			tp.clickTryHerebutton();
+			
+		}
+		
+		@When("The user clicks practice questions link in the Overviewoftrees page")
+		public void the_user_clicks_practice_questions_link_in_the_overviewoftrees_page() {
+		   
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			tp.click_PracticeQnsLink();
+		}
+
+		@Then("The user should be redirected to the Practice question Page of tree")
+		public void the_user_should_be_redirected_to_the_practice_question_page_of_tree() {
+		   
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			boolean PracticeQns_Page=tp.check_PracticeQnsPage();
+			Assert.assertEquals(PracticeQns_Page, true);
+			logger.info("PracticeQns_Page  dispalyed.........");
+		 
+		}
+
+
+
+		
+		//----------Click the page links under Menu--------
+		@When("user clicks the {string} link")
+		public void user_clicks_the_link(String menuItem) {
+			logger.info("User clicks the "+menuItem+" link under Tree Menu........");
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			switch(menuItem)
+		      {
+		      	case  "overviewoftrees": tp.click_OverviewofTreeLink();break;
+		      	case  "terminologies": tp.click_terminologiesLink();break;
+		      	case  "typesoftrees":tp.click_types_of_treesLink();break;
+		      	case  "tree-traversals":tp.click_tree_traversalsLink();break;
+		      	case  "traversals-illustration":tp.click_traversals_illustrationLink();break;
+		      	case  "binary-trees":tp.click_binary_treesLink();break;
+		      	case  "types-of-binary-trees":tp.click_types_of_binary_treesLink();break;
+		      	case  "implementation-in-python":tp.click_implementation_in_pythonLink();break;
+		      	case  "Binary Tree Traversals":tp.click_BinaryTreeTraversalsLink();break;
+		      	case  "Implementation of Binary Trees":tp.click_ImplementationofBinaryTreesLink();break;
+		      	case  "Applications of Binary trees":tp.click_ApplicationsofBinarytreesLink();break;
+		      	case  "Binary Search Trees":tp.click_BinarySearchTreesLink();break;
+		      	case  "Implementation Of BST":tp.click_ImplementationOfBSTLink();break;
+		      	default:System.out.println("There is no such page..........");
+		    }
+		}
+
+		@Then("user will navigate to {string} page")
+		public void user_will_navigate_to_page(String menuItem) {
+			logger.info("Verify whether the "+menuItem+" page is opened........");
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			switch(menuItem)
+		      {
+		      	case  "overviewoftrees": Assert.assertTrue(tp.check_Overview_of_TreePage());break;
+		      	case  "terminologies":Assert.assertTrue(tp.check_terminologiesPage());break;
+		      	case  "typesoftrees":Assert.assertTrue(tp.check_types_of_treesPage());break;
+		      	case  "tree-traversals":Assert.assertTrue(tp.check_tree_traversalsPage());break;
+		      	case  "traversals-illustration":Assert.assertTrue(tp.check_traversals_illustrationPage());break;
+		      	case  "binary-trees":Assert.assertTrue(tp.check_binary_treesPage());break;
+		      	case  "types-of-binary-trees":Assert.assertTrue(tp.check_types_of_binary_treesPage());break;
+		      	case  "implementation-in-python":Assert.assertTrue(tp.check_implementation_in_pythonPage());break;
+		      	case  "Binary Tree Traversals":Assert.assertTrue(tp.check_BinaryTreeTraversalsPage());break;
+		      	case  "Implementation of Binary Trees":Assert.assertTrue(tp.check_ImplementationofBinaryTreesPage());break;
+		      	case  "Applications of Binary trees":Assert.assertTrue(tp.check_ApplicationsofBinarytreesPage());break;
+		      	case  "Binary Search Trees":Assert.assertTrue(tp.check_BinarySearchTreesPage());break;
+		      	case  "Implementation Of BST":Assert.assertTrue(tp.check_ImplementationOfBSTPage());break;
+		      	default: System.out.println("There is no such page to display.....");
+		    } 
+		}
 }
+
+
+

@@ -11,6 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.GraphPage;
 
+
 public class GraphSteps {
 	
 	WebDriver driver;
@@ -19,7 +20,7 @@ public class GraphSteps {
 	
 	@Given("clicking the get started button of Graph")
 	public void clicking_the_get_started_button_of_graph() {
-	
+
 		GraphPage gp=new GraphPage(BaseClass.getDriver());
 		gp.click_Getstarted();
 		logger.info("Getstarted button clicked............");
@@ -52,11 +53,13 @@ public class GraphSteps {
 		
 	    }
 	//GraphRepersentations link
+
 	@When("User click on the GraphRepresentations link")
 	public void user_click_on_the_graph_repersentations_link() {
 		GraphPage gp=new GraphPage(BaseClass.getDriver());
 		gp.click_GraphRepresentationsLink();
 		logger.info("GraphRepersentations link  clicked............");
+
 	}
 
 	@Then("GraphRepresentations page will be displayed")
@@ -84,6 +87,7 @@ public class GraphSteps {
 		gp.clickTryHereBtn();
 		
 	}
+
 
 	
 }

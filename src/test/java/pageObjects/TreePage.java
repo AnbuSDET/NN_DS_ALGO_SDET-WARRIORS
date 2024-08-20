@@ -1,5 +1,8 @@
 package pageObjects;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,13 +13,13 @@ public class TreePage extends BasePage{
 	
 	public TreePage(WebDriver driver) {
 		super(driver);
+
 	}
 	
 	//----------------------------WebElements----------------------------
 	
 	@FindBy(xpath="//a[@href='tree']")
 	private WebElement TreeGetStrdBtn;
-//////a[normalize-space()='Overview of Trees']
 
 	@FindBy(xpath="//a[normalize-space()='Overview of Trees']")
 	private WebElement OverviewoftreeBtn;
@@ -59,8 +62,15 @@ public class TreePage extends BasePage{
 	
 	@FindBy(xpath="//a[@href='/tryEditor']")
 	private WebElement TryHereBtn;
-		
-    String Tree_link_URL="https://dsportalapp.herokuapp.com/tree/";
+	
+	@FindBy(xpath="//li[@class='list-group-item list-group-item-light ']/a")
+	private List<WebElement> TreeMenuLinks;
+	
+	@FindBy(xpath="//a[normalize-space()='Practice Questions']")
+	private WebElement PracticeQnsBtn;
+	
+	
+	String Tree_link_URL="https://dsportalapp.herokuapp.com/tree/";
 	String Tree_HomePage_URL="https://dsportalapp.herokuapp.com/tree/";
 	String Overview_of_Trees_URL="https://dsportalapp.herokuapp.com/tree/overview-of-trees/";
 	String terminologies_URL="https://dsportalapp.herokuapp.com/tree/terminologies/";
@@ -75,7 +85,7 @@ public class TreePage extends BasePage{
 	String ApplicationsofBinarytrees_URL="https://dsportalapp.herokuapp.com/tree/applications-of-binary-trees/";
 	String BinarySearchTrees_URL="https://dsportalapp.herokuapp.com/tree/binary-search-trees/";
 	String ImplementationOfBST_URL="https://dsportalapp.herokuapp.com/tree/implementation-of-bst/";
-	
+	String TreePracticeQns_URL="https://dsportalapp.herokuapp.com/tree/practice";
 	//----------------------------------------Methods------------------------
 	
 	public void click_Getstarted() {
@@ -93,7 +103,10 @@ public class TreePage extends BasePage{
 
 	public void click_OverviewofTreeLink() {
 		OverviewoftreeBtn.click();
-	}
+
+	}	
+	
+	
 
 	public boolean check_Overview_of_TreePage() {
 		 String Current_URL=BaseClass.getDriver().getCurrentUrl();
@@ -233,7 +246,20 @@ public class TreePage extends BasePage{
 		String Current_URL=BaseClass.getDriver().getCurrentUrl();
 		 boolean Check_URL = ImplementationOfBST_URL.equals(Current_URL);	
 		 return Check_URL;			
-	}
-	
+	}	
 
+	
+	
+	//PracticeQns
+			public void click_PracticeQnsLink() {
+			// TODO Auto-generated method stub
+			PracticeQnsBtn.click();
+		}
+			
+		public boolean check_PracticeQnsPage() {
+			String Current_URL=BaseClass.getDriver().getCurrentUrl();
+			 boolean Check_URL = TreePracticeQns_URL.equals(Current_URL);	
+			 return Check_URL;			
+		}
+		
 }

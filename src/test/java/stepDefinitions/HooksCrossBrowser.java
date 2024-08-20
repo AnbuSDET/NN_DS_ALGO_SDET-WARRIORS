@@ -43,7 +43,7 @@ public class HooksCrossBrowser {
    	}
 	
 	
-   // @After
+  // @After
 	public void tearDown()
 	{
     	 BaseClass.getDriver().quit();
@@ -51,7 +51,7 @@ public class HooksCrossBrowser {
 	}
 	
 	
-   // @AfterStep
+    //@AfterStep
 	public void addScreenshot(Scenario scenario)
 	{      
     	// this is for cucumber report

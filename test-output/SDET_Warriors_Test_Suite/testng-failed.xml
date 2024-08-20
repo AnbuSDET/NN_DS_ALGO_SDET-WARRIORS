@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" data-provider-thread-count="4" name="Failed suite [SDET_Warriors_Test_Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="Parallel Testing(failed)">
+    <classes>
+      <class name="testRunner.TestRunnerParallel">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="160 33 161 34 162 35 163 36 91 28 92 30 255"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- testRunner.TestRunnerParallel -->
+    </classes>
+  </test> <!-- Parallel Testing(failed) -->
+</suite> <!-- Failed suite [SDET_Warriors_Test_Suite] -->
