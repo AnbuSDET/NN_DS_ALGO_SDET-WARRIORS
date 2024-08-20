@@ -6,7 +6,7 @@
       <class name="testRunner.TestRunnerParallel">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="65 84 85 86 87 46 47"/>
+          <include name="runScenario" invocation-numbers="160 33 161 34 162 35 163 36 91 28 92 30 255"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- testRunner.TestRunnerParallel -->

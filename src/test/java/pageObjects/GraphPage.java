@@ -27,12 +27,18 @@ public class GraphPage extends BasePage {
 	
 	@FindBy(xpath="//a[normalize-space()='Graph Representations']")
 	private WebElement GraphRepresentationBtn;
+
+	
 	String Graph_HomePage_URL="https://dsportalapp.herokuapp.com/graph/";
+	
 	String Graph_Page_URL="https://dsportalapp.herokuapp.com/graph/graph/";
-//	String Graph_HomePage_URL="'https:\\/\\/dsportalapp.herokuapp.com\\/'";
-//	String Graph_Page_URL="https://dsportalapp.herokuapp.com/graph/graph/";
+
 	String GraphRepersentations_Page_URL="https://dsportalapp.herokuapp.com/graph/graph-representations/"	;
-//----------Methods--------------
+	
+	
+	
+	//----------Methods--------------
+
 	public void click_Getstarted()
 	{
 		GraphGetStrdBtn.click();
@@ -49,6 +55,10 @@ public class GraphPage extends BasePage {
 	{
 		GraphBtn.click();
 	}
+
+	public void clickTryHereBtn() {
+		TryHereBtn.click();
+	}
 	
 	public boolean check_GraphPage()
 	{
@@ -57,14 +67,21 @@ public class GraphPage extends BasePage {
 		 return Check_URL;
 	}
 
-	public void click_GraphRepersentationsLink() {
+
+	public void click_GraphRepresentationsLink() {
+
 		// TODO Auto-generated method stub
 		GraphRepresentationBtn.click();
 	}
 
-	public boolean check_GraphRepersentationsLink() {
+	public boolean check_GraphRepresentationsLink() {
+
 		// TODO Auto-generated method stub
 		String Current_URL=BaseClass.getDriver().getCurrentUrl();
 		 boolean Check_URL = GraphRepersentations_Page_URL.equals(Current_URL);	
 		 return Check_URL;
-	}}
+
+	}
+	
+}
+

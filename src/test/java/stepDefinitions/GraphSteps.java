@@ -1,4 +1,15 @@
 package stepDefinitions;
+import java.util.Properties;
+
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import Factory.BaseClass;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pageObjects.GraphPage;
 
 import java.util.Properties;
 
@@ -18,9 +29,9 @@ public class GraphSteps {
 	Properties p;
 	Logger logger=BaseClass.getLogger();
 	
-	@Given("clicking the get started of Graph")
-	public void clicking_the_get_started_of_graph() {
-	
+	@Given("clicking the get started button of Graph")
+	public void clicking_the_get_started_button_of_graph() {
+		
 		GraphPage gp=new GraphPage(BaseClass.getDriver());
 		gp.click_Getstarted();
 		logger.info("Getstarted button clicked............");
@@ -53,22 +64,38 @@ public class GraphSteps {
 		
 	    }
 	//GraphRepersentations link
-	@When("User click on the GraphRepersentations link")
+
+	@When("User click on the GraphRepresentations link")
 	public void user_click_on_the_graph_repersentations_link() {
 		GraphPage gp=new GraphPage(BaseClass.getDriver());
-		gp.click_GraphRepersentationsLink();
+		gp.click_GraphRepresentationsLink();
 		logger.info("GraphRepersentations link  clicked............");
 	}
 
-	@Then("GraphRepersentations page will be displayed")
+	@Then("GraphRepresentations page will be displayed")
 	public void graph_repersentations_page_will_be_displayed() {
 		GraphPage gp=new GraphPage(BaseClass.getDriver());
-		boolean GraphRepersentations_Page_URL=gp.check_GraphRepersentationsLink();
-		Assert.assertEquals(GraphRepersentations_Page_URL, true);
-		logger.info("GraphRepersentations  page dispalyed.........");
+		boolean GraphRepresentations_Page_URL=gp.check_GraphRepresentationsLink();
+		Assert.assertEquals(GraphRepresentations_Page_URL, true);
+		logger.info("GraphRepresentations  page displayed.........");
+	}
+	
+	
+	@Given("User moves to the graph page and clicks the Try here button in this Page")
+	public void user_moves_to_the_graph_page_and_clicks_the_try_here_button_in_this_page() {
+		logger.info("User clicks Try here at Graph page.........");
+		GraphPage gp=new GraphPage(BaseClass.getDriver());
+		gp.click_GraphLink();
+		gp.clickTryHereBtn();		
+	}
+	
+	@Given("User moves to the graph representations page and clicks the Try here button in this Page")
+	public void user_moves_to_the_graph_representations_page_and_clicks_the_try_here_button_in_this_page() {
+		logger.info("User clicks Try here at Graph Representations page.........");
+		GraphPage gp=new GraphPage(BaseClass.getDriver());
+		gp.click_GraphRepresentationsLink();
+		gp.clickTryHereBtn();
+		
 	}
 
-
-
-
-}
+	}
