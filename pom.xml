@@ -11,8 +11,8 @@
 	
 	<properties>
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	
 	</properties>
+	
 	<build>
 	 <pluginManagement>
 	   <plugins>
@@ -37,7 +37,7 @@
 				  <properties>
 				       <property>
 				          <name>data-provider-thread-count</name>
-				          <value>4</value>
+				          <value>3</value>
 				       </property>
 				  </properties>
 			   </configuration>
@@ -144,17 +144,11 @@
 	</dependency>
 	
 	<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
-	<!--<dependency>
-   <groupId>io.qameta.allure</groupId>
-    <artifactId>allure-cucumber7-jvm</artifactId>
-    <version>2.17.3</version>
+	<dependency>
+	    <groupId>io.qameta.allure</groupId>
+	    <artifactId>allure-cucumber7-jvm</artifactId>
+	    <version>2.29.0</version>
 	</dependency>
-<! https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
-<dependency>
-    <groupId>io.qameta.allure</groupId>
-    <artifactId>allure-cucumber7-jvm</artifactId>
-    <version>2.29.0</version>
-</dependency>
 <!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
 	<dependency>
 	    <groupId>ru.yandex.qatools.ashot</groupId>
