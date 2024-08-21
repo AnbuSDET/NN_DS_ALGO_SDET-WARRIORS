@@ -26,7 +26,6 @@ public class HooksCrossBrowser {
 	Properties p;
 	
 	//------------------FOR CROSS BROWSER TESTING-----------------
-
 	//@Before
 	public void setup() throws Throwable
 	{
@@ -37,31 +36,26 @@ public class HooksCrossBrowser {
 		p= BaseClass.getProperties();
 	    BaseClass.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		BaseClass.getDriver().get(p.getProperty("appURL"));
-		//BaseClass.getDriver().manage().window().maximize();
-		
+		BaseClass.getDriver().manage().window().maximize();
 		BaseClass.getLogger().info("Application launched.......");
    	}
 	
-	
-   // @After
+    //@After
 	public void tearDown()
 	{
     	 BaseClass.getDriver().quit();
     	driver.remove();
 	}
 	
-	
-   // @AfterStep
+    //@AfterStep
 	public void addScreenshot(Scenario scenario)
 	{      
     	// this is for cucumber report
         if(scenario.isFailed()) {
-        	
-        	TakesScreenshot ts=(TakesScreenshot) driver;
+           	TakesScreenshot ts=(TakesScreenshot) driver;
         	byte[] screenshot=ts.getScreenshotAs(OutputType.BYTES);
         	scenario.attach(screenshot, "image/png",scenario.getName());
-        	            
-        }
+            }
 	}
 	
 

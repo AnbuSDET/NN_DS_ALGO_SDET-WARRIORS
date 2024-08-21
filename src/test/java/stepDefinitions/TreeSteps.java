@@ -17,14 +17,7 @@ public class TreeSteps {
 		Properties p;
 		Logger logger=BaseClass.getLogger();
 		
-		
-		@Given("User move to Tree page after login to application")
-		public void user_move_to_tree_page_after_login_to_application() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
-		}
-		
-		@Given("the user click the Tree Getstarted button")
+		@Given("the user click the tree Getstarted button")
 		public void the_user_click_the_tree_getstarted_button() {
 		
 			TreePage tp = new TreePage(BaseClass.getDriver());
@@ -264,4 +257,54 @@ public class TreeSteps {
 			Assert.assertEquals(ImplementationOfBST_Page, true);
 			logger.info("Implementation Of BST dispalyed.........");
 		 }
+		
+		//----------Click the page links under Menu--------
+		@When("user clicks the {string} link")
+		public void user_clicks_the_link(String menuItem) {
+			logger.info("User clicks the "+menuItem+" link under Tree Menu........");
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			switch(menuItem)
+		      {
+		      	case  "overviewoftrees": tp.click_OverviewofTreeLink();break;
+		      	case  "terminologies": tp.click_terminologiesLink();break;
+		      	case  "typesoftrees":tp.click_types_of_treesLink();break;
+		      	case  "tree-traversals":tp.click_tree_traversalsLink();break;
+		      	case  "traversals-illustration":tp.click_traversals_illustrationLink();break;
+		      	case  "binary-trees":tp.click_binary_treesLink();break;
+		      	case  "types-of-binary-trees":tp.click_types_of_binary_treesLink();break;
+		      	case  "implementation-in-python":tp.click_implementation_in_pythonLink();break;
+		      	case  "Binary Tree Traversals":tp.click_BinaryTreeTraversalsLink();break;
+		      	case  "Implementation of Binary Trees":tp.click_ImplementationofBinaryTreesLink();break;
+		      	case  "Applications of Binary trees":tp.click_ApplicationsofBinarytreesLink();break;
+		      	case  "Binary Search Trees":tp.click_BinarySearchTreesLink();break;
+		      	case  "Implementation Of BST":tp.click_ImplementationOfBSTLink();break;
+		      	default:System.out.println("There is no such page..........");
+		    }
+		}
+
+		@Then("user will navigate to {string} page")
+		public void user_will_navigate_to_page(String menuItem) {
+			logger.info("Verify whether the "+menuItem+" page is opened........");
+			TreePage tp=new TreePage(BaseClass.getDriver());
+			switch(menuItem)
+		      {
+		      	case  "overviewoftrees": Assert.assertTrue(tp.check_Overview_of_TreePage());break;
+		      	case  "terminologies":Assert.assertTrue(tp.check_terminologiesPage());break;
+		      	case  "typesoftrees":Assert.assertTrue(tp.check_types_of_treesPage());break;
+		      	case  "tree-traversals":Assert.assertTrue(tp.check_tree_traversalsPage());break;
+		      	case  "traversals-illustration":Assert.assertTrue(tp.check_traversals_illustrationPage());break;
+		      	case  "binary-trees":Assert.assertTrue(tp.check_binary_treesPage());break;
+		      	case  "types-of-binary-trees":Assert.assertTrue(tp.check_types_of_binary_treesPage());break;
+		      	case  "implementation-in-python":Assert.assertTrue(tp.check_implementation_in_pythonPage());break;
+		      	case  "Binary Tree Traversals":Assert.assertTrue(tp.check_BinaryTreeTraversalsPage());break;
+		      	case  "Implementation of Binary Trees":Assert.assertTrue(tp.check_ImplementationofBinaryTreesPage());break;
+		      	case  "Applications of Binary trees":Assert.assertTrue(tp.check_ApplicationsofBinarytreesPage());break;
+		      	case  "Binary Search Trees":Assert.assertTrue(tp.check_BinarySearchTreesPage());break;
+		      	case  "Implementation Of BST":Assert.assertTrue(tp.check_ImplementationOfBSTPage());break;
+		      	default: System.out.println("There is no such page to display.....");
+		    } 
+		}
+
+		
+		
 }

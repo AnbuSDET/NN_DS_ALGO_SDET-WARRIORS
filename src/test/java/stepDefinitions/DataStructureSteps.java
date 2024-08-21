@@ -274,7 +274,6 @@ public class DataStructureSteps {
 	
 	@Then("The User should be able to see error message in the pop message")
 	public void the_user_should_be_able_to_see_error_message_in_the_pop_message() {
-		
 		DataStructurePage ds = new DataStructurePage(BaseClass.getDriver());
 		ds.Validate_OutputConsole_InvalidCodes();
 		logger.info("Alert Message in Python Editor " + ds.Alertmesg);		

@@ -24,15 +24,13 @@ public class Hooks {
 	public void setup() throws Throwable
 	{
 		BaseClass.getLogger().info("Launch the app URL.........");
-		driver= BaseClass.initializeBrowser();
+	    driver= BaseClass.initializeBrowser();
 		p= BaseClass.getProperties();
 		BaseClass.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		BaseClass.getDriver().get(p.getProperty("appURL"));
-		//BaseClass.getDriver().manage().window().maximize();
-		
+		BaseClass.getDriver().manage().window().maximize();
 		BaseClass.getLogger().info("Application launched.......");
    	}
-	
 	
     @After
 	public void tearDown()
@@ -41,18 +39,15 @@ public class Hooks {
     	driver.remove();
 	}
 	
-	
 	@AfterStep
 	public void addScreenshot(Scenario scenario)
 	{      
     	// this is for cucumber report
         if(scenario.isFailed()) {
-        	
-        	TakesScreenshot ts=(TakesScreenshot) driver;
+           	TakesScreenshot ts=(TakesScreenshot) BaseClass.getDriver();
         	byte[] screenshot=ts.getScreenshotAs(OutputType.BYTES);
         	scenario.attach(screenshot, "image/png",scenario.getName());
-        	            
-        }
+          }
 	}
 	
 

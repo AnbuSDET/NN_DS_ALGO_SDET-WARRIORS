@@ -70,11 +70,11 @@ public class BaseClass {
 		//	switch(browser)
 			{
 			case "chrome":
-				driver.set(ThreadGuard.protect(new ChromeDriver()));System.out.println("Testing in Chrome Browser"); break;
+				driver.set(ThreadGuard.protect(new ChromeDriver())); break;
 			case "edge":
-				driver.set(ThreadGuard.protect(new EdgeDriver())); System.out.println("Testing in Edge Browser");break;
+				driver.set(ThreadGuard.protect(new EdgeDriver()));break;
 			case "firefox":
-				driver.set(ThreadGuard.protect(new FirefoxDriver()));System.out.println("Testing in Firefox Browser"); break;
+				driver.set(ThreadGuard.protect(new FirefoxDriver())); break;
 			default:
 				System.out.println("No matching Browser found.......");
 			}

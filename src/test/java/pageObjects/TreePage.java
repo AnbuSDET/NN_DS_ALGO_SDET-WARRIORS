@@ -1,5 +1,8 @@
 package pageObjects;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,7 +19,6 @@ public class TreePage extends BasePage{
 	
 	@FindBy(xpath="//a[@href='tree']")
 	private WebElement TreeGetStrdBtn;
-//////a[normalize-space()='Overview of Trees']
 
 	@FindBy(xpath="//a[normalize-space()='Overview of Trees']")
 	private WebElement OverviewoftreeBtn;
@@ -59,8 +61,11 @@ public class TreePage extends BasePage{
 	
 	@FindBy(xpath="//a[@href='/tryEditor']")
 	private WebElement TryHereBtn;
-		
-    String Tree_link_URL="https://dsportalapp.herokuapp.com/tree/";
+	
+	@FindBy(xpath="//li[@class='list-group-item list-group-item-light ']/a")
+	private List<WebElement> TreeMenuLinks;
+	
+	String Tree_link_URL="https://dsportalapp.herokuapp.com/tree/";
 	String Tree_HomePage_URL="https://dsportalapp.herokuapp.com/tree/";
 	String Overview_of_Trees_URL="https://dsportalapp.herokuapp.com/tree/overview-of-trees/";
 	String terminologies_URL="https://dsportalapp.herokuapp.com/tree/terminologies/";
@@ -235,5 +240,5 @@ public class TreePage extends BasePage{
 		 return Check_URL;			
 	}
 	
-
+	
 }
